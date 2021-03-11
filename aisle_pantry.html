@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Shopping Cart | Concordia Supermarket</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="aisle_pantry.css">
+</head>
+
+<body>
+
+    <!--Logo Banner-->
+    <div id="header">
+        <a href="index.html">
+            <img id="banner" src="banner.png" alt="banner" width="1500" height="150">
+        </a>
+    </div>
+
+    <!--Navigation bar-->
+    <div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a class="active" href="javascript:void(0)" class="dropbtn">Aisles</a>
+                <div class="dropdown-content">
+                    <a href="Bakery.html">Bakery</a>
+                    <a href="dairy.html">Dairy</a>
+                    <a href="fruit aisle.html">Fruits And Vegetables</a>
+                    <a href="frozen_aisle.html">Frozen</a>
+                    <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+                    <a class="actice" href="aisle_pantry.html">Pantry</a>
+                    <a href="oats.html">Oats</a>
+                </div>
+            </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="P5.html">Log In</a></li>
+            <li><a href="P6.html">Sign Up</a></li>
+
+        </ul>
+    </div>
+
+
+    <div class="aisle-banner">
+        <img src="pantry.png" alt="Pantry Banner" width="100%" height="300">
+    </div>
+    <h1>Pantry</h1>
+
+
+    <!--Filter Bar-->
+    <div id="product_filters">
+        <span><b>Filters</b></span>
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('beans__legumes')"> Beans and Legumes</button>
+        <button class="btn" onclick="filterSelection('canned')"> Canned</button>
+        <button class="btn" onclick="filterSelection('condiments')"> Condiments and Toppings</button>
+    </div>
+
+    <!--Product Aisle-->
+    <div class="products">
+
+
+        <div class="item-container">
+
+            <div class="aisle_item">
+                <div class="filterDiv canned">
+                    <a href="product_pantry.html">
+                        <img src="dtomatoes_copy.jpg" alt="Diced Tomatoes." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Diced Tomatoes</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv beans__legumes canned">
+                    <a href="product_pantry.html">
+                        <img src="kidneybeans_copy.jpg" alt="Red Kidney Beans." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Red Kidney Beans</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv canned">
+                    <a href="product_pantry.html">
+                        <img src="tuna_copy.jpg" alt="Tuna." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Solid Light Tuna</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv beans__legumes" id="item-img">
+                    <a href="product_pantry.html">
+                        <img src="chickpeas_copy.jpg" alt="Chickpeas." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Chickpeas</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv canned beans__legumes">
+                    <a href="product_pantry.html">
+                        <img src="corn_copy.jpg" alt="Corn." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Corn</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv condiments">
+                    <a href="product_pantry.html">
+                        <img src="mayonnaise_copy.jpg" alt="mayonnaise." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Mayonnaise</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv beans__legumes">
+                    <a href="product_pantry.html">
+                        <img src="rice_copy.jpg" alt="Basmati Rice." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Basmati Rice</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv condiments">
+                    <a href="product_pantry.html">
+                        <img src="siracha_copy.jpg" alt="Hot Siracha." width=100% height="220">
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Hot Siracha</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="aisle_item">
+                <div class="filterDiv condiments">
+                    <a href="product_pantry.html">
+                        <img src="mustard_copy.jpg" alt="Yellow Mustard." width=100% height="220"><br>
+                    </a>
+                </div>
+                <div class="item-details">
+                    <p>Yellow Mustard</p>
+                    <p>$12.00</p>
+                    <p>500 gms</p>
+                </div>
+                <div class="item-button">
+                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <footer>
+        <a href="backstore.html">Admin Page</a>
+        <p> SOEN287 Course Project- Concordia SuperMarket</p>
+    </footer>
+</body>
+
+</html>

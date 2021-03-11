@@ -1,0 +1,164 @@
+<!DOCTYPE html><html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+		<meta charset=“UTF-8”>	
+        <link rel="stylesheet" type="text/css"
+href="style.css" />
+		<title> 
+      ConcordiaSuperMarket</title>
+      <style>
+        /* The code used to display the images in a responsive way has been heavily influenced by the responsive image gallery section 
+        of w3schools css style images section https://www.w3schools.com/css/css3_images.asp
+        */
+         div.grocheries {
+    border: 2px solid black;
+    background-color: white;
+  }
+  div.grocheries:hover {
+    border: 2px solid darkred;
+  }
+  div.grocheries img {
+    width: 100%;
+    height: auto;
+  }
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .responsive {
+    padding: 40px 10px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }                 
+ 
+      </style>
+	</head>
+    
+	<body>
+    <a href="index.html">
+      <img class="csm-banner" src="banner.png" alt="banner" >
+    </a>
+
+        <ul class="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+                <div class="dropdown-content">
+                  <a href="#"> Baking Supplies</a>
+                  <a href="dairy.html">Dairy</a>
+                  <a href="#"> Frozen</a>
+                  <a href="#"> Fruits & Vegitibles</a>
+                  <a href="#">Meat & Poultry</a>
+                  <a href="oats.html"> Oats</a>
+                  <a href="#"> Pantry</a>
+
+
+                </div>
+              </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="#news">Log In</a></li>
+            <li><a href="#news">Sign Up</a></li>
+          </ul>
+          <div class= "main">
+          <div style="padding:0 16px;"></div>
+            <div class="responsive">
+              <div class="grocheries">
+                <a href="">
+                  <img src=can.jpg alt="Baking supplies" width="600" height="400">
+                </a>
+                <div class="desc">Discover an assortment of baking supplies</div>
+              </div>
+            </div>
+
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="">
+                    <img src= fruits.jpg alt="fruits" width="600" height="400">
+                  </a>
+                  <div class="desc">A fresh selection of fruits every week                       </div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="">
+                    <img src= vegtibles.jpg alt="Vegitibles" width="600" height="400">
+                  </a>
+                  <div class="desc">Delicious locally grown vegitibles</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="dairy.html">
+                    <img src= dairy.jpg alt="dairy" width="600" height="400">
+                  </a>
+                  <div class="desc">Milk and cheese from Quebec farms</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="oats.html">
+                    <img src= oats.jpg alt="oats" width="600" height="400">
+                  </a>
+                  <div class="desc">Delicous breads and cereals can be found in our oats section</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="">
+                    <img src= meat.jpg alt="meat" width="600" height="400">
+                  </a>
+                  <div class="desc"> Meat and poultry cut to perfection</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="">
+                    <img src= pantry.jpg alt="Baked goods" width="600" height="400">
+                  </a>
+                  <div class="desc">Delicous freshly baked goods</div>
+                </div>
+              </div>
+              <div class="responsive">
+                <div class="grocheries">
+                  <a href="">
+                    <img src= frozen.jpg alt="frozen" width="600" height="400">
+                  </a>
+                  <div class="desc">All your frozen products conviniently located in one place</div>
+                </div>
+              </div>
+            </div>
+
+              <footer>
+                <p> SOEN287 Course Project- Concordia SuperMarket</p>
+              </footer>
+
+
+
+	</body>
+</html>

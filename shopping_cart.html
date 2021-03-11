@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Shopping Cart | Concordia Supermarket</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="shopping_cart.css">
+</head>
+
+<body>
+
+    <!--Logo Banner-->
+    <div id="header">
+        <a href="index.html">
+            <img id="banner" src="banner.png" alt="banner" width="1500" height="150">
+        </a>
+    </div>
+
+    <!--Navigation bar-->
+    <div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+                <div class="dropdown-content">
+                    <a href="Bakery.html">Bakery</a>
+                    <a href="dairy.html">Dairy</a>
+                    <a href="fruit aisle.html">Fruits And Vegetables</a>
+                    <a href="frozen_aisle.html">Frozen</a>
+                    <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+                    <a href="aisle_pantry.html">Pantry</a>
+                    <a href="oats.html">Oats</a>
+                </div>
+            </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a class="active" href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="P5.html">Log In</a></li>
+            <li><a href="P6.html">Sign Up</a></li>
+
+        </ul>
+    </div>
+
+    <div class="cart-banner">
+        <img src="cart.jpg" alt="Cart Banner" width="100%" height="300">
+    </div>
+
+    <!--Shopping Cart-->
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <br><br><br><br>
+        <table class="cart">
+            <tbody>
+                <tr class="cart-fields">
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+                <tr class="cart-item">
+                    <td><img src="mayonnaise.png" alt="Mayonnaise Container" width="150" height="150"><br>Hellman's
+                        Mayonnaise
+                    </td>
+                    <td>
+                        <button class="button-cart" type="button">-</button> 0
+                        <button class="button-cart" type="button">+</button>
+                    </td>
+                    <td>$$$$</td>
+                </tr>
+                <tr class="cart-item">
+                    <td><img src="tuna.png" alt="Tuna Canned" width="150" height="150"><br>Unico Tuna</td>
+                    <td>
+                        <button class="button-cart" type="button">-</button> 0
+                        <button class="button-cart" type="button">+</button>
+                    </td>
+                    <td>$$$$</td>
+                </tr>
+                <tr class="cart-item">
+                    <td><img src="mustard.png" alt="Mustard Squeeze Bottle" width="150" height="150"><br>French's
+                        Mustard</td>
+                    <td>
+                        <button class="button-cart" type="button">-</button> 0
+                        <button class="button-cart" type="button">+</button>
+                    </td>
+                    <td>$$$$</td>
+                </tr>
+                <tr class="cart-item">
+                    <td><img src="dtomatoes.png" alt="Diced Tomatoes" width="150" height="150"><br>Diced Tomatoes</td>
+                    <td>
+                        <button class="button-cart" type="button">-</button> 0
+                        <button class="button-cart" type="button">+</button>
+                    </td>
+                    <td>$$$$</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <!--Cart Price Total-->
+
+        <div class="cart-total">
+            <table class="table-total">
+                <tr>
+                    <th>Subtotal</th>
+                    <td>$$$$</td>
+                </tr>
+                <tr>
+                    <th>Tax(QST)</th>
+                    <td>$$$$</td>
+                </tr>
+                <tr>
+                    <th>Tax(GST)</th>
+                    <td>$$$$</td>
+                </tr>
+                <tr>
+                    <th><b>Total</b></th>
+                    <td>$$$$</td>
+                </tr>
+            </table>
+            <div>
+                <button class="button-checkout" type="button">Continue Shopping</button>
+                <button class="button-checkout" type="button">Checkout</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <a href="backstore.html">Admin Page</a>
+        <p> SOEN287 Course Project- Concordia SuperMarket</p>
+    </footer>
+
+</body>
+
+</html>

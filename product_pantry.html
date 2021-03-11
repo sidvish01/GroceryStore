@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Shopping Cart | Concordia Supermarket</title>
+    <link rel="stylesheet" href="product_pantry.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!--Logo Banner-->
+    <div id="header">
+        <a href="index.html">
+            <img id="banner" src="banner.png" alt="banner" width="1500" height="150">
+        </a>
+    </div>
+    <!--Navigation bar-->
+    <div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+                <div class="dropdown-content">
+                    <a href="Bakery.html">Bakery</a>
+                    <a href="dairy.html">Dairy</a>
+                    <a href="fruit aisle.html">Fruits And Vegetables</a>
+                    <a href="frozen_aisle.html">Frozen</a>
+                    <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+                    <a class="active" href="aisle_pantry.html">Pantry</a>
+                    <a href="oats.html">Oats</a>
+                </div>
+            </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="P5.html">Log In</a></li>
+            <li><a href="P6.html">Sign Up</a></li>
+
+        </ul>
+    </div>
+
+    <!--Product Information-->
+    <div class="product-block">
+        <div class="block-child">
+            <div class="product-image">
+                <img src="mayonnaise.png" alt="Mayonnaise" height="380px">
+                <div class="zoom">
+                    <span class="material-icons">zoom_in</span>
+                    <span class="material-icons">zoom_out</span>
+                </div>
+            </div>
+        </div>
+        <div class="block-child">
+            <div class="product-details">
+                <h1>Hellman's Mayonnaise</h1>
+                <span id="price"><b>$10</b></span>
+                <h4>900 G</h4>
+                <p>$$.$/ 100G</p>
+                <button id="add-to-cart" onclick="alert('Added to Cart')">Add to Cart</button>
+                <button id="add-to-cart">+</button>
+                <input class="qty" type="text" name="qty" value="1">
+                <button id="add-to-cart">-</button>
+            </div>
+            <div class="product-description">
+                <p>_______________________________________________________</p>
+                <h2>Prodcut Description</h2>
+                <p>Aaaaaaaabbbbbbbbbbbbbab abbabab ababba...........</p>
+                <p>Product Number: 000000</p>
+                <button id="more-info"><span>More Description</span></button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <a href="backstore.html">Admin Page</a>
+        <p> SOEN287 Course Project- Concordia SuperMarket</p>
+    </footer>
+
+</body>
+
+</html>

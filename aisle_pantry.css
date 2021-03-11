@@ -1,0 +1,180 @@
+#banner {
+    width: 100%;
+    position: top;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+body {
+    background-image: url("background.png");
+    background-size: 225px;
+    background-repeat: repeat;
+}
+
+/* Nav Bar--------------------------*/
+
+ul.navbar {
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: crimson;
+}
+
+@media screen and (max-width: 600px) {
+    ul.navbar li.right, ul.navbar li {
+        float: none;
+    }
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+ul.navbar li.right {
+    float: right;
+}
+
+li a, .dropbtn {
+    text-align: center;
+    color: white;
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: crimson;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover:not(.active) {
+    background-color: pink;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: pink;
+}
+
+ul.navbar li a.active {
+    background-color: darkred;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: pink;
+}
+
+#product-filters {
+    margin-top: 0px;
+}
+
+.products {
+    height: 100%;
+    padding: 75px 15px 88px 15px;
+}
+
+h1 {
+    text-align: center;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.item-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    font-family: 'Faustina', serif;
+    margin-bottom: 30px;
+}
+
+.aisle-item {
+    align-content: center;
+    box-decoration-break: slice;
+}
+
+img {
+    border-top: solid 1.5px #682222;
+    border-left: solid 1.5px #682222;
+    border-right: solid 1.5px #682222;
+}
+
+.item-image {
+    width: 100%;
+    display: block;
+}
+
+.item-details {
+    line-height: 1.5;
+    font-size: 19px;
+    padding: 15px;
+    background: #fafafa;
+    border-right: solid 1.5px #682222;
+    border-left: solid 1.5px #682222;
+}
+
+.item-details>p:last-of-type {
+    font-size: 13px;
+}
+
+.item-button {
+    text-align: center;
+    padding: 10px 0 15px 0;
+    background: #fafafa;
+    border-right: solid 1.5px #682222;
+    border-left: solid 1.5px #682222;
+    border-bottom: solid 1.5px #682222;
+}
+
+.add-button {
+    border: none;
+    border-radius: 10px;
+    background-color: #26282b;
+    color: white;
+    padding: 6px 16px 6px 16px;
+}
+
+.add-button:hover {
+    background-color: #464a54;
+}
+
+footer {
+    height: 88px;
+    width: 100%;
+    margin-top: -88px;
+    background-color: #26282b;
+}
+
+footer p {
+    color: white;
+    padding: 20px;
+    font-family: 'Yeseva One', cursive;
+}
