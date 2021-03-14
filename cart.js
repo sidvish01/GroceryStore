@@ -1,4 +1,6 @@
-var removeQuantityButton = document.getElementsByClassName("button-cart-remove");
+var removeQuantityButton = document.getElementsByClassName(
+  "button-cart-remove"
+);
 var addQuantityButton = document.getElementsByClassName("button-cart-add");
 var itemQuantity = document.getElementsByClassName("item-quantity");
 
@@ -13,7 +15,7 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
         var buttonClicked = event.target;
         buttonClicked.parentNode.parentNode.remove();
         updateCartTotal();
-        checkEmptyCart()
+        checkEmptyCart();
       }
     });
   } else {
@@ -26,12 +28,12 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
         if (removePrompt == true) {
           buttonClicked.parentNode.remove();
           updateCartTotal();
-          checkEmptyCart()
+          checkEmptyCart();
         }
       } else {
         buttonClicked.children[1].innerHTML -= 1;
         updateCartTotal();
-        checkEmptyCart()
+        checkEmptyCart();
       }
     });
   }
@@ -44,7 +46,7 @@ for (var i = 0; i < addQuantityButton.length; i++) {
     buttonClicked.children[1].innerHTML =
       parseInt(buttonClicked.children[1].innerHTML) + 1;
     updateCartTotal();
-    checkEmptyCart()
+    checkEmptyCart();
   });
 }
 
@@ -77,10 +79,61 @@ function updateCartTotal() {
 }
 
 function checkEmptyCart() {
-    var cartItem = document.getElementsByClassName("cart-item")
-    if (cartItem.length==0){
-        alert("Your cart is empty, let's take you to homepage and add some items!!")
-        location.replace("index.html")
-
-    }
+  var cartItem = document.getElementsByClassName("cart-item");
+  if (cartItem.length == 0) {
+    alert(
+      "Your cart is empty, let's take you to homepage and add some items!!"
+    );
+    location.replace("index.html");
+  }
 }
+
+//var addtocartbutton = document.getElementById('add-to-cart')
+//addtocartbutton.addEventListener("click", function (event) {
+//var buttonClicked = event.target
+function addtocartbutton() {
+  if (document.getElementById("cart-tab").innerHTML == "Shopping Cart") {
+    var addItems = parseInt(document.getElementById("qty").innerHTML);
+    document.getElementById("cart-tab").innerHTML =
+      "Shopping Cart (" + addItems + ")";
+    document.getElementById("qty").innerHTML = 1;
+  } else {
+    if (document.getElementById("cart-tab").innerHTML.length == 17) {
+      var noOfItems = parseInt(
+        document.getElementById("cart-tab").innerHTML.substring(15, 16)
+      );
+      var addItems = parseInt(document.getElementById("qty").innerHTML);
+      document.getElementById("cart-tab").innerHTML =
+        "Shopping Cart (" + (noOfItems + addItems) + ")";
+      document.getElementById("qty").innerHTML = 1;
+    } else if (document.getElementById("cart-tab").innerHTML.length == 18) {
+      var noOfItems = parseInt(
+        document.getElementById("cart-tab").innerHTML.substring(15, 17)
+      );
+      var addItems = parseInt(document.getElementById("qty").innerHTML);
+      document.getElementById("cart-tab").innerHTML =
+        "Shopping Cart (" + (noOfItems + addItems) + ")";
+      document.getElementById("qty").innerHTML = 1;
+    } else {
+      var noOfItems = parseInt(
+        document.getElementById("cart-tab").innerHTML.substring(15, 18)
+      );
+      var addItems = parseInt(document.getElementById("qty").innerHTML);
+      document.getElementById("cart-tab").innerHTML =
+        "Shopping Cart (" + (noOfItems + addItems) + ")";
+      document.getElementById("qty").innerHTML = 1;
+    }
+  }
+}
+
+function increaseQuantity() {
+  document.getElementById("qty").innerHTML =
+    parseInt(document.getElementById("qty").innerHTML) + 1;
+}
+function decreaseQuantity() {
+  document.getElementById("qty").innerHTML =
+    parseInt(document.getElementById("qty").innerHTML) - 1;
+}
+
+console.log(document.getElementById("cart-tab").innerHTML.length);
+//})
