@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="shopping_cart.css">
+    <script src="cart.js" async></script>
 </head>
 
 <body>
@@ -53,48 +54,49 @@
         <h1>Shopping Cart</h1>
         <br><br><br><br>
         <table class="cart">
-            <tbody>
-                <tr class="cart-fields">
-                    <th>Item</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                </tr>
-                <tr class="cart-item">
-                    <td><img src="mayonnaise.png" alt="Mayonnaise Container" width="150" height="150"><br>Hellman's
-                        Mayonnaise
-                    </td>
-                    <td>
-                        <button class="button-cart" type="button">-</button> 0
-                        <button class="button-cart" type="button">+</button>
-                    </td>
-                    <td>$$$$</td>
-                </tr>
-                <tr class="cart-item">
-                    <td><img src="tuna.png" alt="Tuna Canned" width="150" height="150"><br>Unico Tuna</td>
-                    <td>
-                        <button class="button-cart" type="button">-</button> 0
-                        <button class="button-cart" type="button">+</button>
-                    </td>
-                    <td>$$$$</td>
-                </tr>
-                <tr class="cart-item">
-                    <td><img src="mustard.png" alt="Mustard Squeeze Bottle" width="150" height="150"><br>French's
-                        Mustard</td>
-                    <td>
-                        <button class="button-cart" type="button">-</button> 0
-                        <button class="button-cart" type="button">+</button>
-                    </td>
-                    <td>$$$$</td>
-                </tr>
-                <tr class="cart-item">
-                    <td><img src="dtomatoes.png" alt="Diced Tomatoes" width="150" height="150"><br>Diced Tomatoes</td>
-                    <td>
-                        <button class="button-cart" type="button">-</button> 0
-                        <button class="button-cart" type="button">+</button>
-                    </td>
-                    <td>$$$$</td>
-                </tr>
-            </tbody>
+            <tr class="cart-fields">
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr class="cart-item">
+                <td class="item-name"><img src="mayonnaise.png" alt="Mayonnaise Container" width="150"
+                        height="150"><br>Hellman's
+                    Mayonnaise
+                </td>
+                <td>
+                    <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">5</span>
+                    <button class="button-cart-add" type="button">+</button>
+                </td>
+                <td class="item-price">$19.49</td>
+            </tr>
+            <tr class="cart-item">
+                <td class="item-name"><img src="tuna.png" alt="Tuna Canned" width="150" height="150"><br>Unico Tuna</td>
+                <td>
+                    <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">3</span>
+                    <button class="button-cart-add" type="button">+</button>
+                </td>
+                <td class="item-price">$7.99</td>
+            </tr>
+            <tr class="cart-item">
+                <td class="item-name"><img src="mustard.png" alt="Mustard Squeeze Bottle" width="150"
+                        height="150"><br>French's
+                    Mustard</td>
+                <td>
+                    <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">1</span>
+                    <button class="button-cart-add" type="button">+</button>
+                </td>
+                <td class="item-price">$12.99</td>
+            </tr>
+            <tr class="cart-item">
+                <td class="item-name"><img src="dtomatoes.png" alt="Diced Tomatoes" width="150" height="150"><br>Diced
+                    Tomatoes</td>
+                <td>
+                    <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">2</span>
+                    <button class="button-cart-add" type="button">+</button>
+                </td>
+                <td class="item-price">$10.49</td>
+            </tr>
         </table>
 
 
@@ -104,23 +106,23 @@
             <table class="table-total">
                 <tr>
                     <th>Subtotal</th>
-                    <td>$$$$</td>
+                    <td class = "subtotal">$$$$</td>
                 </tr>
                 <tr>
                     <th>Tax(QST)</th>
-                    <td>$$$$</td>
+                    <td class = "qst">$$$$</td>
                 </tr>
                 <tr>
                     <th>Tax(GST)</th>
-                    <td>$$$$</td>
+                    <td class = "gst">$$$$</td>
                 </tr>
                 <tr>
                     <th><b>Total</b></th>
-                    <td>$$$$</td>
+                    <td class = "total">$$$$</td>
                 </tr>
             </table>
             <div>
-                <button class="button-checkout" type="button">Continue Shopping</button>
+                <a href = 'index.html'><button class="button-checkout" type="button">Continue Shopping</button></a>
                 <button class="button-checkout" type="button">Checkout</button>
 
             </div>

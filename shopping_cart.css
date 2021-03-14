@@ -154,7 +154,7 @@ th:last-child, td:last-child {
 
 /* Buttons –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.button-cart {
+.button-cart-add {
     border-radius: 10px;
     border: none;
     font-size: 10px;
@@ -164,7 +164,21 @@ th:last-child, td:last-child {
     margin-left: 5px;
 }
 
-.button-cart:hover {
+.button-cart-add:hover {
+    background-color: #82848c;
+}
+
+.button-cart-remove {
+    border-radius: 10px;
+    border: none;
+    font-size: 10px;
+    padding: 10px 20px 10px 20px;
+    background-color: #17181c;
+    color: white;
+    margin-left: 5px;
+}
+
+.button-cart-remove:hover {
     background-color: #82848c;
 }
 

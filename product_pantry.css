@@ -5,10 +5,6 @@
     padding-left: 0px;
 }
 
-body {
-    background-color: #fdeeee;
-}
-
 /* Nav Bar--------------------------*/
 
 ul.navbar {
@@ -205,4 +201,12 @@ footer p {
     color: white;
     padding: 20px;
     font-family: 'Yeseva One', cursive;
+}
+@media screen and (max-width: 600px) {
+    footer{
+        margin-top: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+    
 }
