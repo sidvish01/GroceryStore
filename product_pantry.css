@@ -147,8 +147,9 @@ ul.navbar li a.active {
 #increase {
     border-radius: 10px;
     border: none;
-    font-size: 14px;
-    padding: 18px 30px 18px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 14px 22px 14px 22px;
     background-color: #17181c;
     color: white;
     margin-left: 5px;
@@ -160,9 +161,10 @@ ul.navbar li a.active {
 
 #decrease {
     border-radius: 10px;
+    font-weight: bold;
     border: none;
-    font-size: 14px;
-    padding: 18px 30px 18px 30px;
+    font-size: 18px;
+    padding: 14px 22px 14px 22px;
     background-color: #17181c;
     color: white;
     margin-left: 5px;
@@ -192,6 +194,10 @@ ul.navbar li a.active {
     display: inline-block;
     position: relative;
     transition: 0.5s;
+}
+
+#more{
+    display: none;
 }
 
 /*hover slide to right*/
@@ -231,10 +237,11 @@ footer p {
     font-family: 'Yeseva One', cursive;
 }
 @media screen and (max-width: 800px) {
+    
     footer{
         margin-top: 100%;
         position: fixed;
-        bottom: 0;
+        bottom: -100px;
     }
     
 }
