@@ -144,6 +144,34 @@ ul.navbar li a.active {
     background-color: #82848c;
 }
 
+#increase {
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    padding: 18px 30px 18px 30px;
+    background-color: #17181c;
+    color: white;
+    margin-left: 5px;
+}
+
+#increase:hover {
+    background-color: #82848c;
+}
+
+#decrease {
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    padding: 18px 30px 18px 30px;
+    background-color: #17181c;
+    color: white;
+    margin-left: 5px;
+}
+
+#decrease:hover {
+    background-color: #82848c;
+}
+
 #more-info {
     display: inline-block;
     border-radius: 10px;
@@ -202,7 +230,7 @@ footer p {
     padding: 20px;
     font-family: 'Yeseva One', cursive;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     footer{
         margin-top: 100%;
         position: fixed;

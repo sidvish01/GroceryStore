@@ -8,8 +8,8 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Shopping Cart | Concordia Supermarket</title>
     <link rel="stylesheet" href="product_pantry.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="cart.js" async></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
             </li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="contact_us.html">Contact Us</a></li>
-            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="shopping_cart.html"><span id = "cart-tab">Shopping Cart</span></a></li>
             <li><a href="P5.html">Log In</a></li>
             <li><a href="P6.html">Sign Up</a></li>
 
@@ -61,10 +61,10 @@
                 <span id="price"><b>$10</b></span>
                 <h4>900 G</h4>
                 <p>$$.$/ 100G</p>
-                <button id="add-to-cart" onclick="alert('Added to Cart')">Add to Cart</button>
-                <button id="add-to-cart">+</button>
-                <input class="qty" type="text" name="qty" value="1">
-                <button id="add-to-cart">-</button>
+                <button id="add-to-cart" onclick = "addtocartbutton()">Add to Cart</button>
+                <button id="increase" onclick = "increaseQuantity()">+</button>
+                <b><span id="qty"> 1 </span></b>
+                <button id="decrease" onclick = "decreaseQuantity()">-</button>
             </div>
             <div class="product-description">
                 <h2>Prodcut Description</h2>
