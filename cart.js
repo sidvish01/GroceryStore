@@ -10,30 +10,37 @@ var products = [
     price: "$12.99",
     img: "dtomatoes.png",
   },
+
 ];
 
 //var cartRow = document.createElement('tr')
-
-var cart = document.getElementsByClassName("try")[0];
-var cartRow = document.createElement('div')
-var cartRowContent = `
-<table class="cart">
+var something =``
+var firstthing = `<table class="cart">
 <tr class="cart-fields">
     <th>Item</th>
     <th>Quantity</th>
     <th>Price</th>
-</tr>
-<tr class="cart-item">
-    <td class="item-name"><img src="${products[0].img}" alt="Mayonnaise Container" width="150"
+</tr>`
+var nextthing =``
+var lastthing = `</table>`
+for (var i = 0; i<sessionStorage.length-1; i++){
+    nextthing = nextthing+`<tr class="cart-item">
+    <td class="item-name"><img src="${products[i].img}" alt="Mayonnaise Container" width="150"
             height="150"><br>Hellman's
         Mayonnaise
     </td>
     <td>
-        <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">${sessionStorage.getItem(products[0].name)}</span>
+        <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">${sessionStorage.getItem(products[i].name)}</span>
         <button class="button-cart-add" type="button">+</button>
     </td>
-    <td class="item-price">${products[0].price}</td>
-</tr></table>`;
+    <td class="item-price">${products[i].price}</td>
+</tr>`
+}
+something = firstthing+nextthing+lastthing
+
+var cart = document.getElementsByClassName("try")[0];
+var cartRow = document.createElement('div')
+var cartRowContent = something
 cartRow.innerHTML = cartRowContent
 cart.prepend(cartRow)
 
@@ -209,8 +216,17 @@ function addToSessionStorage(itemName, itemQuantity) {
 
 //})
 
+/*var something =``
+var firstthing = `<table class="cart">
+<tr class="cart-fields">
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+</tr>`
+var nextthing =``
+var lastthing = `</table>`
 for (var i = 0; i<sessionStorage.length-1; i++){
-    var slimContent = slimContent+`<tr class="cart-item">
+    nextthing = nextthing+`<tr class="cart-item">
     <td class="item-name"><img src="${products[i].img}" alt="Mayonnaise Container" width="150"
             height="150"><br>Hellman's
         Mayonnaise
@@ -222,4 +238,5 @@ for (var i = 0; i<sessionStorage.length-1; i++){
     <td class="item-price">${products[i].price}</td>
 </tr>`
 }
-console.log(slimContent)
+something = firstthing+nextthing+lastthing*/
+sessionStorage.setItem("Diced Tomatoes", "4")
