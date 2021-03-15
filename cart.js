@@ -15,6 +15,36 @@ var products = [
     price: "$14.99",
     img: "tuna.png",
   },
+  {
+    name:"Plain Balkan Yogurt",
+    price:"$3.99",
+    img:"d1.jpg",
+  },
+  {
+    name:"Lactina Partly Skimmed Milk 2%",
+    price:"$5.19",
+    img:"d2.jpg",
+  },
+  {
+    name:"Quebon Bagged Milk 2%",
+    price:"$6.99",
+    img:"d3.jpg",
+  },
+  {
+    name:"1 Year Old Organic Cheddar",
+    price:"$9.79",
+    img:"d4.jpg",
+  },
+  {
+    name:"Strawberry Cherry Yogurt Tubes",
+    price:"$3.99",
+    img:"d5.jpg",
+  },
+  {
+    name:"Yop Drinkable Yogurt",
+    price:"$9.99",
+    img:"d7.jpg",
+  },
 ];
 updateCartTab(0);
 //var cartRow = document.createElement('tr')
