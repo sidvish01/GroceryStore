@@ -10,60 +10,75 @@ var products = [
     price: "$12.99",
     img: "dtomatoes.png",
   },
-
+  {
+    name: "Solid Light Tuna",
+    price: "$14.99",
+    img: "tuna.png",
+  },
 ];
 
 //var cartRow = document.createElement('tr')
-var something =``
+var something = ``;
 var firstthing = `<table class="cart">
 <tr class="cart-fields">
     <th>Item</th>
     <th>Quantity</th>
     <th>Price</th>
-</tr>`
-var nextthing =``
-var lastthing = `</table>`
-for (var i = 0; i<sessionStorage.length-1; i++){
-    nextthing = nextthing+`<tr class="cart-item">
-    <td class="item-name"><img src="${products[i].img}" alt="Mayonnaise Container" width="150"
-            height="150"><br>Hellman's
-        Mayonnaise
+</tr>`;
+var nextthing = ``;
+var lastthing = `</table>`;
+for (var i = 0; i < sessionStorage.length; i++) {
+  for (var p = 0; p < products.length; p++) {
+    if (products[p].name == sessionStorage.key(i) && sessionStorage.getItem(products[p].name)!=0) {
+      nextthing =
+        nextthing +
+        `<tr class="cart-item">
+    <td class="item-name"><img src="${
+      products[p].img
+    }" alt="Mayonnaise Container" width="150"
+            height="150"><br><span id = "productname">${products[p].name}</span>
     </td>
     <td>
-        <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">${sessionStorage.getItem(products[i].name)}</span>
+        <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">${sessionStorage.getItem(
+          products[p].name
+        )}</span>
         <button class="button-cart-add" type="button">+</button>
     </td>
-    <td class="item-price">${products[i].price}</td>
-</tr>`
+    <td class="item-price">${products[p].price}</td>
+</tr>`;
+    }
+  }
 }
-something = firstthing+nextthing+lastthing
+something = firstthing + nextthing + lastthing;
 
 var cart = document.getElementsByClassName("try")[0];
-var cartRow = document.createElement('div')
-var cartRowContent = something
-cartRow.innerHTML = cartRowContent
-cart.prepend(cartRow)
-
+var cartRow = document.createElement("div");
+var cartRowContent = something;
+cartRow.innerHTML = cartRowContent;
+cart.prepend(cartRow);
 
 var removeQuantityButton = document.getElementsByClassName(
   "button-cart-remove"
 );
 var addQuantityButton = document.getElementsByClassName("button-cart-add");
 var itemQuantity = document.getElementsByClassName("item-quantity");
-updateCartTotal()
+updateCartTotal();
 
 //console.log(document.getElementsByClassName("item-quantity")[0].innerHTML)
 for (var i = 0; i < removeQuantityButton.length; i++) {
   var button = removeQuantityButton[i];
   if (itemQuantity[i].innerHTML == 1) {
-    console.log(itemQuantity[i].innerHTML);
+    //console.log(itemQuantity[i].innerHTML);
     button.addEventListener("click", function (event) {
       var removePrompt = confirm("Do you want to remove this item from cart?");
       if (removePrompt == true) {
+        sessionStorage.setItem(
+          buttonClicked.parentNode.children[0].children[2].innerText,
+          0
+        );
         var buttonClicked = event.target;
         buttonClicked.parentNode.parentNode.remove();
         updateCartTotal();
-        sessionStorage.setItem("Hellman's Mayonnaise", 0);
         checkEmptyCart();
       }
     });
@@ -75,15 +90,21 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
           "Do you want to remove this item from cart?"
         );
         if (removePrompt == true) {
+          sessionStorage.setItem(
+            buttonClicked.parentNode.children[0].children[2].innerText,
+            0
+          );
           buttonClicked.parentNode.remove();
           updateCartTotal();
-          sessionStorage.setItem("Hellman's Mayonnaise", 0);
           checkEmptyCart();
         }
       } else {
+        sessionStorage.setItem(
+          buttonClicked.parentNode.children[0].children[2].innerText,
+          buttonClicked.children[1].innerHTML - 1
+        );
         buttonClicked.children[1].innerHTML -= 1;
         updateCartTotal();
-        sessionStorage.setItem("Hellman's Mayonnaise", buttonClicked.children[1].innerHTML);
         checkEmptyCart();
       }
     });
@@ -94,10 +115,13 @@ for (var i = 0; i < addQuantityButton.length; i++) {
   var button = addQuantityButton[i];
   button.addEventListener("click", function (event) {
     var buttonClicked = event.target.parentNode;
+    sessionStorage.setItem(
+      buttonClicked.parentNode.children[0].children[2].innerText,
+      parseInt(buttonClicked.children[1].innerHTML) + 1
+    );
     buttonClicked.children[1].innerHTML =
       parseInt(buttonClicked.children[1].innerHTML) + 1;
     updateCartTotal();
-    sessionStorage.setItem("Hellman's Mayonnaise", buttonClicked.children[1].innerHTML);
     checkEmptyCart();
   });
 }
@@ -158,7 +182,6 @@ function addtocartbutton() {
         "Shopping Cart (" + (noOfItems + addItems) + ")";
       document.getElementById("qty").innerHTML = 1;
       addToSessionStorage(key, noOfItems + addItems);
-      console.log(sessionStorage);
     } else if (document.getElementById("cart-tab").innerHTML.length == 18) {
       var noOfItems = parseInt(
         document.getElementById("cart-tab").innerHTML.substring(15, 17)
@@ -168,7 +191,6 @@ function addtocartbutton() {
         "Shopping Cart (" + (noOfItems + addItems) + ")";
       document.getElementById("qty").innerHTML = 1;
       addToSessionStorage(key, noOfItems + addItems);
-      console.log(sessionStorage);
     } else {
       var noOfItems = parseInt(
         document.getElementById("cart-tab").innerHTML.substring(15, 18)
@@ -178,7 +200,6 @@ function addtocartbutton() {
         "Shopping Cart (" + (noOfItems + addItems) + ")";
       document.getElementById("qty").innerHTML = 1;
       addToSessionStorage(key, noOfItems + addItems);
-      console.log(sessionStorage);
     }
   }
 }
@@ -214,29 +235,3 @@ function addToSessionStorage(itemName, itemQuantity) {
   sessionStorage.setItem(itemName, itemQuantity);
 }
 
-//})
-
-/*var something =``
-var firstthing = `<table class="cart">
-<tr class="cart-fields">
-    <th>Item</th>
-    <th>Quantity</th>
-    <th>Price</th>
-</tr>`
-var nextthing =``
-var lastthing = `</table>`
-for (var i = 0; i<sessionStorage.length-1; i++){
-    nextthing = nextthing+`<tr class="cart-item">
-    <td class="item-name"><img src="${products[i].img}" alt="Mayonnaise Container" width="150"
-            height="150"><br>Hellman's
-        Mayonnaise
-    </td>
-    <td>
-        <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">${sessionStorage.getItem(products[i].name)}</span>
-        <button class="button-cart-add" type="button">+</button>
-    </td>
-    <td class="item-price">${products[i].price}</td>
-</tr>`
-}
-something = firstthing+nextthing+lastthing*/
-sessionStorage.setItem("Diced Tomatoes", "4")

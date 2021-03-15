@@ -37,7 +37,7 @@
             </li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a class="active" href="contact_us.html">Contact Us</a></li>
-            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="shopping_cart.html"><span id = "cart-tab">Shopping Cart</span></a></li>
             <li><a href="P5.html">Log In</a></li>
             <li><a href="P6.html">Sign Up</a></li>
 
@@ -87,21 +87,21 @@
             <h3>FAQ</h3>
             <button class="accordion">How do I sign-up for an account?</button>
             <div class="panel">
-                <p>.........</p>
+                <p>................................................................</p>
             </div>
 
             <button class="accordion">What kind of payment methods do you accept?</button>
             <div class="panel">
-                <p>........</p>
+                <p>Dogecoin</p>
             </div>
 
             <button class="accordion">How Long will it take for my ordered to be delivered?</button>
             <div class="panel">
-                <p>.........</p>
+                <p>Forever</p>
             </div>
             <button class="accordion">Can I cancel my order?</button>
             <div class="panel">
-                <p>.........</p>
+                <p>Nope</p>
             </div>
         </div>
 
@@ -113,6 +113,20 @@
         <a href="backstore.html">Admin Page</a>
         <p> SOEN287 Course Project- Concordia SuperMarket</p>
     </footer>
+
+    <script>var acc = document.getElementsByClassName("accordion")
+
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            })
+        }</script>
 
 </body>
 
