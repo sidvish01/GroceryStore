@@ -16,7 +16,7 @@ var products = [
     img: "tuna.png",
   },
 ];
-
+updateCartTab(0);
 //var cartRow = document.createElement('tr')
 var something = ``;
 var firstthing = `<table class="cart">
@@ -29,7 +29,10 @@ var nextthing = ``;
 var lastthing = `</table>`;
 for (var i = 0; i < sessionStorage.length; i++) {
   for (var p = 0; p < products.length; p++) {
-    if (products[p].name == sessionStorage.key(i) && sessionStorage.getItem(products[p].name)!=0) {
+    if (
+      products[p].name == sessionStorage.key(i) &&
+      sessionStorage.getItem(products[p].name) != 0
+    ) {
       nextthing =
         nextthing +
         `<tr class="cart-item">
@@ -72,12 +75,14 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
     button.addEventListener("click", function (event) {
       var removePrompt = confirm("Do you want to remove this item from cart?");
       if (removePrompt == true) {
+        console.log(buttonClicked.parentNode.children[0].children[2].innerText, 0)
         sessionStorage.setItem(
           buttonClicked.parentNode.children[0].children[2].innerText,
           0
         );
         var buttonClicked = event.target;
         buttonClicked.parentNode.parentNode.remove();
+        updateCartTab(-1);
         updateCartTotal();
         checkEmptyCart();
       }
@@ -95,6 +100,7 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
             0
           );
           buttonClicked.parentNode.remove();
+          updateCartTab(-1);
           updateCartTotal();
           checkEmptyCart();
         }
@@ -104,6 +110,7 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
           buttonClicked.children[1].innerHTML - 1
         );
         buttonClicked.children[1].innerHTML -= 1;
+        updateCartTab(-1);
         updateCartTotal();
         checkEmptyCart();
       }
@@ -121,6 +128,7 @@ for (var i = 0; i < addQuantityButton.length; i++) {
     );
     buttonClicked.children[1].innerHTML =
       parseInt(buttonClicked.children[1].innerHTML) + 1;
+      updateCartTab(1);
     updateCartTotal();
     checkEmptyCart();
   });
@@ -166,10 +174,16 @@ function checkEmptyCart() {
 
 function addtocartbutton() {
   var key = document.getElementById("name").innerHTML;
-  if (document.getElementById("cart-tab").innerHTML == "Shopping Cart") {
+  var addItems = parseInt(document.getElementById("qty").innerHTML);
+  updateCartTab(addItems);
+  addToSessionStorage(key, addItems);
+  document.getElementById("qty").innerHTML = 1;
+  
+  /* if (document.getElementById("cart-tab").innerHTML == "Shopping Cart") {
     var addItems = parseInt(document.getElementById("qty").innerHTML);
-    document.getElementById("cart-tab").innerHTML =
-      "Shopping Cart (" + addItems + ")";
+    //document.getElementById("cart-tab").innerHTML =
+      //"Shopping Cart (" + addItems + ")";
+    updateCartTab(addItems)
     document.getElementById("qty").innerHTML = 1;
     addToSessionStorage(key, addItems);
   } else {
@@ -178,8 +192,9 @@ function addtocartbutton() {
         document.getElementById("cart-tab").innerHTML.substring(15, 16)
       );
       var addItems = parseInt(document.getElementById("qty").innerHTML);
-      document.getElementById("cart-tab").innerHTML =
-        "Shopping Cart (" + (noOfItems + addItems) + ")";
+      //document.getElementById("cart-tab").innerHTML =
+        //"Shopping Cart (" + (noOfItems + addItems) + ")";
+     updateCartTab(noOfItems + addItems)
       document.getElementById("qty").innerHTML = 1;
       addToSessionStorage(key, noOfItems + addItems);
     } else if (document.getElementById("cart-tab").innerHTML.length == 18) {
@@ -187,8 +202,9 @@ function addtocartbutton() {
         document.getElementById("cart-tab").innerHTML.substring(15, 17)
       );
       var addItems = parseInt(document.getElementById("qty").innerHTML);
-      document.getElementById("cart-tab").innerHTML =
-        "Shopping Cart (" + (noOfItems + addItems) + ")";
+      //document.getElementById("cart-tab").innerHTML =
+        //"Shopping Cart (" + (noOfItems + addItems) + ")";
+        updateCartTab(noOfItems + addItems)
       document.getElementById("qty").innerHTML = 1;
       addToSessionStorage(key, noOfItems + addItems);
     } else {
@@ -196,12 +212,13 @@ function addtocartbutton() {
         document.getElementById("cart-tab").innerHTML.substring(15, 18)
       );
       var addItems = parseInt(document.getElementById("qty").innerHTML);
-      document.getElementById("cart-tab").innerHTML =
-        "Shopping Cart (" + (noOfItems + addItems) + ")";
+      //document.getElementById("cart-tab").innerHTML =
+        //"Shopping Cart (" + (noOfItems + addItems) + ")";
+        updateCartTab(noOfItems + addItems)
       document.getElementById("qty").innerHTML = 1;
       addToSessionStorage(key, noOfItems + addItems);
     }
-  }
+  }*/
 }
 
 function increaseQuantity() {
@@ -213,6 +230,16 @@ function decreaseQuantity() {
     document.getElementById("qty").innerHTML =
       parseInt(document.getElementById("qty").innerHTML) - 1;
 }
+
+
+function addToCartAisle(name){
+  var itemName = ""+name
+  console.log(itemName)
+  addToSessionStorage(name, 1)
+  updateCartTab(1)
+  
+}
+
 
 function moreDescription() {
   if (
@@ -232,6 +259,31 @@ function moreDescription() {
 }
 
 function addToSessionStorage(itemName, itemQuantity) {
-  sessionStorage.setItem(itemName, itemQuantity);
+    if (sessionStorage.getItem(itemName) != null) {
+      sessionStorage.setItem(itemName, (parseInt(sessionStorage.getItem(itemName)) + parseInt(itemQuantity)));
+      
+    } else {
+      sessionStorage.setItem(itemName, itemQuantity);
+    }
+    //showShowCartTab();
+  }
+  
+  //sessionStorage.setItem(itemName, (parseInt(sessionStorage.getItem("itemName")) + parseInt(itemQuantity)));
+
+function updateCartTab(value) {
+  if (sessionStorage.getItem("itemTotal") != null) {
+    sessionStorage.setItem(
+      "itemTotal",
+      parseInt(sessionStorage.getItem("itemTotal")) + parseInt(value)
+    );
+  } else {
+    sessionStorage.setItem("itemTotal", value);
+  }
+  showShowCartTab();
 }
 
+function showShowCartTab() {
+    //console.log(sessionStorage.getItem("itemTotal"))
+  document.getElementById("cart-tab").innerHTML =
+    "Shopping Cart (" + sessionStorage.getItem("itemTotal") + ")";
+}

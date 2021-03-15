@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="aisle_pantry.css">
+    <script src="cart.js" async></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             </li>
             <li><a href="aboutUs.html">About Us</a></li>
             <li><a href="contact_us.html">Contact Us</a></li>
-            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="shopping_cart.html"><span id = "cart-tab">Shopping Cart</span></a></li>
             <li><a href="P5.html">Log In</a></li>
             <li><a href="P6.html">Sign Up</a></li>
 
@@ -78,7 +79,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Diced Tomatoes')">Add to Cart</button>
                 </div>
             </div>
 
@@ -94,7 +95,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Red Kidney Beans')">Add to Cart</button>
                 </div>
             </div>
 
@@ -110,7 +111,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Solid Light Tuna')">Add to Cart</button>
                 </div>
             </div>
 
@@ -126,7 +127,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Chickpeas')">Add to Cart</button>
                 </div>
             </div>
 
@@ -142,7 +143,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Corn')">Add to Cart</button>
                 </div>
             </div>
 
@@ -153,12 +154,12 @@
                     </a>
                 </div>
                 <div class="item-details">
-                    <p>Mayonnaise</p>
+                    <p>Hellman's Mayonnaise</p>
                     <p>$12.00</p>
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" id = "Hellman's Mayonnaise" name="add to cart" class="add-button" onclick="addToCartAisle(this.id)">Add to Cart</button>
                 </div>
             </div>
 
@@ -174,7 +175,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Basmati Rice')">Add to Cart</button>
                 </div>
             </div>
 
@@ -190,7 +191,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Hot Siracha')">Add to Cart</button>
                 </div>
             </div>
 
@@ -206,7 +207,7 @@
                     <p>500 gms</p>
                 </div>
                 <div class="item-button">
-                    <button type="button" name="add to cart" class="add-button">Add to Cart</button>
+                    <button type="button" name="add to cart" class="add-button" onclick="addToCartAisle('Yellow Mustard')">Add to Cart</button>
                 </div>
             </div>
 
