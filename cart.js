@@ -48,6 +48,8 @@ var products = [
 ];
 updateCartTab(0);
 //var cartRow = document.createElement('tr')
+
+// code to dynamically create the cart on every pageload-------------------------------------------------
 var something = ``;
 var firstthing = `<table class="cart">
 <tr class="cart-fields">
@@ -90,6 +92,11 @@ var cartRowContent = something;
 cartRow.innerHTML = cartRowContent;
 cart.prepend(cartRow);
 
+//--------------------------------------------------------------------------------------------------
+
+
+
+//code to parse details from shopping cart and update cart quaantities or remove item from-------------------------
 var removeQuantityButton = document.getElementsByClassName(
   "button-cart-remove"
 );
@@ -98,6 +105,8 @@ var itemQuantity = document.getElementsByClassName("item-quantity");
 updateCartTotal();
 
 //console.log(document.getElementsByClassName("item-quantity")[0].innerHTML)
+
+// test cases for the '-' button ----
 for (var i = 0; i < removeQuantityButton.length; i++) {
   var button = removeQuantityButton[i];
   if (itemQuantity[i].innerHTML == 1) {
@@ -148,6 +157,8 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
   }
 }
 
+// test case for '+' button
+
 for (var i = 0; i < addQuantityButton.length; i++) {
   var button = addQuantityButton[i];
   button.addEventListener("click", function (event) {
@@ -163,7 +174,10 @@ for (var i = 0; i < addQuantityButton.length; i++) {
     checkEmptyCart();
   });
 }
+//---------------------------------------------------------------------------------------------
 
+
+// function that parses values from cart and updates cart total------------------------------------
 function updateCartTotal() {
   var cartItem = document.getElementsByClassName("cart-item");
   var total = 0;
@@ -196,12 +210,14 @@ function checkEmptyCart() {
   var cartItem = document.getElementsByClassName("cart-item");
   if (cartItem.length == 0) {
     alert(
-      "Your cart is empty, let's take you to homepage and add some items!!"
+      "Your cart is empty, let's take you to homepage to add some items!!"
     );
     location.replace("index.html");
   }
 }
+//-------------------------------------------------------------------------------------------------------
 
+//function to use add to cart button on the product page-------------------------------------------------
 function addtocartbutton() {
   var key = document.getElementById("name").innerHTML;
   var addItems = parseInt(document.getElementById("qty").innerHTML);
@@ -250,7 +266,10 @@ function addtocartbutton() {
     }
   }*/
 }
+//----------------------------------------------------------------------------------------------------
 
+
+// functions for '+' & '-' button on product page------------------------------------------------------
 function increaseQuantity() {
   document.getElementById("qty").innerHTML =
     parseInt(document.getElementById("qty").innerHTML) + 1;
@@ -269,6 +288,8 @@ function addToCartAisle(name){
   updateCartTab(1)
   
 }
+//-----------------------------------------------------------------------------------------------------
+
 
 
 function moreDescription() {
@@ -288,6 +309,8 @@ function moreDescription() {
   }
 }
 
+
+//function that ads products to session storage using parameters passed-----------------------------------
 function addToSessionStorage(itemName, itemQuantity) {
     if (sessionStorage.getItem(itemName) != null) {
       sessionStorage.setItem(itemName, (parseInt(sessionStorage.getItem(itemName)) + parseInt(itemQuantity)));
@@ -299,7 +322,10 @@ function addToSessionStorage(itemName, itemQuantity) {
   }
   
   //sessionStorage.setItem(itemName, (parseInt(sessionStorage.getItem("itemName")) + parseInt(itemQuantity)));
+//---------------------------------------------------------------------------------------------------------
 
+
+//Function that updates amount of products in shopping cart in the sessionStorage---------------------------
 function updateCartTab(value) {
   if (sessionStorage.getItem("itemTotal") != null) {
     sessionStorage.setItem(
@@ -311,9 +337,14 @@ function updateCartTab(value) {
   }
   showShowCartTab();
 }
+//--------------------------------------------------------------------------------------------------------
 
+
+
+// function to show total items on the shopping cart tab at navbar--------
 function showShowCartTab() {
     //console.log(sessionStorage.getItem("itemTotal"))
   document.getElementById("cart-tab").innerHTML =
     "Shopping Cart (" + sessionStorage.getItem("itemTotal") + ")";
 }
+//----------------------------------
