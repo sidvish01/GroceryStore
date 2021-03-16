@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>product page</title>
+		<link rel="stylesheet" type="text/css" href="navbar.css">
+		<link rel="script" type="text/javascript" href="main.js">
+		
+	</head>
+
+	
+
+	<body >
+		<header>
+       		<img class="banner" src="images/banner.png" alt="banner" >		
+		</header>
+
+		<div>
+			<ul class="navbar">
+		        <li><a href="index.html">Home</a></li>
+		        <li class="dropdown">
+		          <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+		          <div class="dropdown-content">
+		            <a href="Bakery.html">Baking Supplies</a>
+		            <a href="dairy.html">Dairy</a>
+		            <a href="fruit aisle.html">Fruits And Vegetables</a>
+		            <a href="frozen_aisle.html">Frozen</a>
+		            <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+		            <a href="aisle_pantry.html">Pantry</a>
+		            <a href="oats.html">Oats</a>
+		          </div>
+		        </li>
+		        <li><a href="aboutUs.html">About Us</a></li>
+		        <li><a href="contact_us.html">Contact Us</a></li>
+		        <li><a href="shopping_cart.html"><span id="cart-tab">Shopping Cart</span></a></li>
+		        <li><a href="P5.html">Log In</a></li>
+		        <li><a href="P6.html">Sign Up</a></li>
+	      </ul>
+     	 </div>
+
+
+     	 <div class="productArea">
+     	 	<div class="productRow">
+	     	<div class="column" >
+	     		<img src="images/apples.jpg" width="100%" alt="apple.jpg">
+			</div>
+
+			<div class="column">
+				<h2 id="name">Apple<h2>
+				<p> 3.99$/lb</p>	
+				<hr>
+				<h2>Product Description</h2>
+				<p>Granny smith apple
+					<span id="dots" style="display: inline;">...</span>
+					<span id="more" style="display: none;">
+						<br>
+						Product sold in bags of 1 lbs
+						<br>
+						Product of Québec
+					</span>
+					</p>
+				<div class="buttonIncrement">
+				    <button onclick = "increaseQuantity()"  class="increment" id="addProduct" >+</button>
+				    <span class="increment" id="qty">1</span>
+				    </span>
+				    <button onclick = "decreaseQuantity()"  class="increment" id="substact" >-</button>
+				</div>
+				<button onclick = "moreDescription()"; class="add" id="more-info" style="vertical-align:middle"><span>More Description</span></button>
+				
+				<br>
+				<button class="add" style="vertical-align:middle" id="toCart"><span>Add to cart </span></button>
+					
+		</div>
+		</div>
+		</div>
+		
+	<div>
+		<footer>
+        <p> SOEN287 Course Project- Concordia SuperMarket</p>
+        <p><a href="backstore.html">Admin login</a></p>
+
+    </footer>
+
+
+		<script src="main.js">
+			
+		</script>
+	</body>
+	
+	</div>
+
+</html> 
