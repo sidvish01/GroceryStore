@@ -30,6 +30,106 @@ var products = [
     price:"$6.99",
     img:"d3.jpg",
   },
+  {
+    name: "Edamame",
+    price: 2.99,
+     img: "pictures/adameme.jpg"
+    },
+      {
+    name: "Chocolate Waffels",
+     price: 4.99, 
+    img: "pictures/chocolatewaffels.jpg"
+    },
+      {
+    name: "Cookies Cream Ice-cream",
+    price: 3.99,
+    img: "pictures/cookiedcreamicecream.jpg"
+    },
+      {
+    name: "Falafel",
+    price: 4.99,
+    img: "pictures/falafel.jpg"
+    },
+      {
+    name: "Creamy Spinach Tomato",
+    price: 3.99,
+    img: "pictures/creamyspinach.jpg"
+    },
+      {
+    name: "Frozen Pizza",
+     price: 9.49,
+    img: "pictures/frozenpizza.jpg"
+    },
+    {
+      name: "Apple",
+      price: 3.99,
+      img: 'images/apples.jpg'
+  },
+  {
+      name:'banana',
+      price:0.99,
+      img:"images/bananas.jpg",
+  },
+  {
+      name:'grapes',
+      price:2.99,
+      img:"images/Grapes.jpg",
+  },
+  {
+      name:'carrots',
+      price:1.99,
+      img:"images/carrots.jpg",
+  },
+  {
+      name:'potato',
+      price:4.99,
+      img:"images/potato.jpg",
+  },
+  {
+      name:'onion',
+      price:1.99,
+      img:"images/onion.jpg",
+  },
+  {
+    name: "Double Flax Sliced Bread",
+    price: "$2.99",
+    img: "images/Image1.jpg",
+  },
+  {
+    name: "Sprouted Grains Sliced Bread",
+    price: "$4.99",
+    img: "images/Image2.jpg",
+  },
+  {
+    name: "Regular Challah Bread",
+    price: "$4.29",
+    img: "images/Image3.jpg",
+  },
+  {
+    name: "Cheddar Cheese Bread",
+    price: "$6.79",
+    img: "images/Image4.jpg",
+  },
+  {
+    name: "Italian Calabrese Bread",
+    price: "$2.99",
+    img: "images/Image5.jpg",
+  },
+  {
+    name: "Goodhearth Grain Bread",
+    price: "$3.49",
+    img: "images/Image6.jpg",
+  },
+  {
+    name: "Cinnamon Swirl Loaf Bread",
+    price: "$4.99",
+    img: "images/Image7.jpg",
+  },
+  {
+    name: "12 Grains Rye Sliced Bread",
+    price: "$3.99",
+    img: "images/Image8.jpg",
+  }
   
 ];
 updateCartTab(0);
