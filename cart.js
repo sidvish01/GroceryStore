@@ -235,7 +235,6 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
     button.addEventListener("click", function (event) {
       var removePrompt = confirm("Do you want to remove this item from cart?");
       if (removePrompt == true) {
-        console.log(buttonClicked.parentNode.children[0].children[2].innerText, 0)
         sessionStorage.setItem(
           buttonClicked.parentNode.children[0].children[2].innerText,
           0
