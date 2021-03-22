@@ -233,6 +233,7 @@ for (var i = 0; i < removeQuantityButton.length; i++) {
   if (itemQuantity[i].innerHTML == 1) {
     //console.log(itemQuantity[i].innerHTML);
     button.addEventListener("click", function (event) {
+      var buttonClicked = event.target.parentNode;
       var removePrompt = confirm("Do you want to remove this item from cart?");
       if (removePrompt == true) {
         sessionStorage.setItem(
