@@ -129,6 +129,41 @@ var products = [
     name: "12 Grains Rye Sliced Bread",
     price: "$3.99",
     img: "images/Image8.jpg",
+  },
+  {
+    name: "Lean Ground Beef",
+    price: 13.21,
+    img: "product-images/groundbeef.jpg"
+  },
+  {
+    name: "Diced Tomatoes",
+    price: 12.99,
+    img: "product-images/groundbeef.jpg"
+  },
+  {
+    name: "Pepper Beef Steaks",
+    price: 16.04,
+    img: "product-images/pepper-beef-steaks.jpg"
+  },
+  {
+    name: "T-Bone Steaks",
+    price: 26.44,
+    img: "product-images/tbone-steaks.jpg"
+  },
+  {
+    name: "Fresh Whole Chicken",
+    price: 12.54,
+    img: "product-images/chicken.jpg"
+  },
+  {
+    name: "Pork Back Ribs",
+    price: 15.41,
+    img: "product-images/pork-backribs.jpg"
+  },
+  {
+    name: "Chicken Drumsticks",
+    price: 7.62,
+    img: "product-images/chicken-drumstick.jpg"
   }
   
 ];
