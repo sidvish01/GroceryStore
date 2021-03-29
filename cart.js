@@ -461,7 +461,6 @@ function updateCartTab(value) {
 //--------------------------------------------------------------------------------------------------------
 
 
-
 // function to show total items on the shopping cart tab at navbar--------
 function showShowCartTab() {
     //console.log(sessionStorage.getItem("itemTotal"))
