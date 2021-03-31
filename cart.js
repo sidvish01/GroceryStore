@@ -66,27 +66,27 @@ var products = [
       img: 'images/apples.jpg'
   },
   {
-      name:'banana',
+      name:'Banana',
       price:0.99,
       img:"images/bananas.jpg",
   },
   {
-      name:'grapes',
+      name:'Grapes',
       price:2.99,
       img:"images/Grapes.jpg",
   },
   {
-      name:'carrots',
+      name:'Carrots',
       price:1.99,
       img:"images/carrots.jpg",
   },
   {
-      name:'potato',
+      name:'Potato',
       price:4.99,
       img:"images/potato.jpg",
   },
   {
-      name:'onion',
+      name:'Onion',
       price:1.99,
       img:"images/onion.jpg",
   },
