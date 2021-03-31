@@ -33,62 +33,62 @@ var products = [
   {
     name: "Edamame",
     price: 2.99,
-     img: "pictures/adameme.jpg"
-    },
-      {
+    img: "pictures/adameme.jpg"
+  },
+  {
     name: "Chocolate Waffels",
-     price: 4.99, 
+    price: 4.99, 
     img: "pictures/chocolatewaffels.jpg"
-    },
-      {
+  },
+  {
     name: "Cookies Cream Ice-cream",
     price: 3.99,
     img: "pictures/cookiedcreamicecream.jpg"
-    },
-      {
+  },
+  {
     name: "Falafel",
     price: 4.99,
     img: "pictures/falafel.jpg"
-    },
-      {
+  },
+  {
     name: "Creamy Spinach Tomato",
     price: 3.99,
     img: "pictures/creamyspinach.jpg"
-    },
-      {
+  },
+  {
     name: "Frozen Pizza",
-     price: 9.49,
+    price: 9.49,
     img: "pictures/frozenpizza.jpg"
-    },
-    {
-      name: "Apple",
-      price: 3.99,
-      img: 'images/apples.jpg'
   },
   {
-      name:"Banana",
-      price:0.99,
-      img:"images/bananas.jpg",
+    name: "Apple",
+    price: 3.99,
+    img: 'images/apples.jpg'
   },
   {
-      name:"Grapes",
-      price:2.99,
-      img:"images/Grapes.jpg",
+    name:"Banana",
+    price:0.99,
+    img:"images/bananas.jpg",
   },
   {
-      name:"Carrots",
-      price:1.99,
-      img:"images/carrots.jpg",
+    name:"Grapes",
+    price:2.99,
+    img:"images/Grapes.jpg",
   },
   {
-      name:"Potato",
-      price:4.99,
-      img:"images/potato.jpg",
+    name:"Carrots",
+    price:1.99,
+    img:"images/carrots.jpg",
   },
   {
-      name:"Onion",
-      price:1.99,
-      img:"images/onion.jpg",
+    name:"Potato",
+    price:4.99,
+    img:"images/potato.jpg",
+  },
+  {
+    name:"Onion",
+    price:1.99,
+    img:"images/onion.jpg",
   },
   {
     name: "Double Flax Sliced Bread",
