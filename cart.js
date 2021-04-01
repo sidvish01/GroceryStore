@@ -93,51 +93,46 @@ var products = [
   {
     name: "Double Flax Sliced Bread",
     price: "$2.99",
-    img: "images/Image1.jpg",
+    img: "Images/Image1.jpg",
   },
   {
     name: "Sprouted Grains Sliced Bread",
     price: "$4.99",
-    img: "images/Image2.jpg",
+    img: "Images/Image2.jpg",
   },
   {
     name: "Regular Challah Bread",
     price: "$4.29",
-    img: "images/Image3.jpg",
+    img: "Images/Image3.jpg",
   },
   {
     name: "Cheddar Cheese Bread",
     price: "$6.79",
-    img: "images/Image4.jpg",
+    img: "Images/Image4.jpg",
   },
   {
     name: "Italian Calabrese Bread",
     price: "$2.99",
-    img: "images/Image5.jpg",
+    img: "Images/Image5.jpg",
   },
   {
     name: "Goodhearth Grain Bread",
     price: "$3.49",
-    img: "images/Image6.jpg",
+    img: "Images/Image6.jpg",
   },
   {
     name: "Cinnamon Swirl Loaf Bread",
     price: "$4.99",
-    img: "images/Image7.jpg",
+    img: "Images/Image7.jpg",
   },
   {
     name: "12 Grains Rye Sliced Bread",
     price: "$3.99",
-    img: "images/Image8.jpg",
+    img: "Images/Image8.jpg",
   },
   {
     name: "Lean Ground Beef",
     price: 13.21,
-    img: "product-images/groundbeef.jpg"
-  },
-  {
-    name: "Diced Tomatoes",
-    price: 12.99,
     img: "product-images/groundbeef.jpg"
   },
   {
