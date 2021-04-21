@@ -463,3 +463,50 @@ function showShowCartTab() {
     "Shopping Cart (" + sessionStorage.getItem("itemTotal") + ")";
 }
 //----------------------------------
+
+// function to create xml with order list -------------------------------------
+
+function passTheData() {
+
+  var orderDetail = "<client>\n" + /*"<name> " + "namefromsession " + "</name>\n" + "<lastname> " + "lastname " + "</lastname\n" + */"<id> " + "idfromsession " + "</id>\n" /* +  "<address> " + "Address " + "</address\n"> + */ 
+
+  for (var i = 0; i < sessionStorage.length; i++) {
+    for (var p = 0; p < products.length; p++) {
+      if (
+        products[p].name == sessionStorage.key(i) &&
+        sessionStorage.getItem(products[p].name) != 0
+        ) {
+          var productName = products[p].name
+          var productQuantity = sessionStorage.getItem(products[p].name)
+
+          orderDetail += "<products>\n" + "<productname> " + productName + " </productname>\n" + "<quan> " + productQuantity + " </quan>\n" + "</products>\n"
+        }
+      }
+    }
+  orderDetail += "</client>\n\n"
+
+  var postXML = new XMLHttpRequest();
+  console.log(orderDetail)
+  var url = "http://localhost:8888/test.php"
+  var length = orderDetail.length
+  
+  postXML.open("POST", url, true);
+  postXML.setRequestHeader("Content-Type", "application/xml");
+  postXML.setRequestHeader("content-length", length);
+  postXML.send(orderDetail);
+
+  /*
+  var doc = document.implementation.createDocument("", "", null);
+  var orderElem = doc.createElement("Order");
+  
+  var orderId = doc.createElement("userId");
+  orderId.setAttribute("banana", "1");
+  orderId.setAttribute("mayonnaise", "4");
+  orderId.setAttribute("tuna", "7");
+  
+  orderElem.appendChild(orderId);
+  doc.appendChild(orderElem);
+*/
+  //var serializer = new XMLSerializer();
+  //alert (serializer.serializeToString (doc));
+  }
