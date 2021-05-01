@@ -32,7 +32,7 @@
       <div class = "main-area">
         <h1>Edit Client</h1>
         <div class="boxing" >
-          <form action="orderlist2.php" method="post">
+          <form action="orderlist.php" method="post">
           <div class="clientinfo">
       <div class="info">
         Name:
