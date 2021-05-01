@@ -19,10 +19,10 @@
 			
 			<ul class="navbar">
 		        <ul class="navbar">
-		        <li><a href="backstore.html">Home</a></li>
-		        <li><a href="products.html">Product</a> </li>
+		        <li><a href="backstore.php">Home</a></li>
+		        <li><a href="products.php">Product</a> </li>
 		        <li><a href="User List.php">User</a></li>
-		        <li><a href="orderlist.html">Order</a></li>
+		        <li><a href="orderlist.php">Order</a></li>
 	      	</ul>
 	      	</ul>
       
