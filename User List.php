@@ -115,7 +115,7 @@
   
   </div>
   <hr>
-    <a href="p6.php"><button class="add">Add User</button></a>
+    <a href="P6.php"><button class="add">Add User</button></a>
    
 
 </body>	
