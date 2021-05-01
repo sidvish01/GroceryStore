@@ -468,7 +468,7 @@ function showShowCartTab() {
 
 function passTheData() {
 
-  var orderDetail = "<client>\n" + /*"<name> " + "namefromsession " + "</name>\n" + "<lastname> " + "lastname " + "</lastname\n" + */"<id> " + "idfromsession " + "</id>\n" /* +  "<address> " + "Address " + "</address\n"> + */ 
+  var orderDetail = "<client>\n" + /*"<name> " + "namefromsession " + "</name>\n" + "<lastname> " + "lastname " + "</lastname\n" + */"<id> " + "csm@concordia.ca " + "</id>\n" /* +  "<address> " + "Address " + "</address\n"> + */ 
 
   for (var i = 0; i < sessionStorage.length; i++) {
     for (var p = 0; p < products.length; p++) {
@@ -486,13 +486,11 @@ function passTheData() {
   orderDetail += "</client>\n\n"
 
   var postXML = new XMLHttpRequest();
-  console.log(orderDetail)
+  //console.log(orderDetail)
   var url = "http://localhost:8888/test.php"
-  var length = orderDetail.length
   
   postXML.open("POST", url, true);
   postXML.setRequestHeader("Content-Type", "application/xml");
-  postXML.setRequestHeader("content-length", length);
   postXML.send(orderDetail);
 
   /*
