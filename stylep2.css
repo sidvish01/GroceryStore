@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width:100%;
+  height: auto;
+  display: block;
+}
+.csm-banner {
+  display: block;
+}
+body{
+  background-image: url("backgroundd.png");
+  background-size: 220px;
+  background-repeat: repeat;
+}
+ul.navbar {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: crimson;
+}
+@media screen and (max-width: 600px) {
+  ul.navbar li.right,
+  ul.navbar li {float: none;}
+}
+ul.navbar li{ float: left;}
+ul.navbar li a{
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+ul.navbar li.right {float: right;}
+
+li a, .dropbtn{
+  text-align: center;
+  color: white;
+  padding: 14px 16px;
+  display: inline-block;
+  text-decoration: none;
+}
+li.dropdown{
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: crimson;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+ul.navbar li a:hover:not(.active) {
+  background-color: pink;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: pink;
+}
+ul.navbar li a.active {background-color: darkred;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: pink;
+}
+.banner {
+  background-image: url(jez-timms-meatpoultry.jpg);
+  background-size: cover;
+  height: 420px;
+  padding-top: 102px;
+  width: 100%;
+}
+.main-area {
+  height: 100%;
+  padding: 75px 15px 88px 15px;
+  text-align: center;
+}
+h2 {
+  font-family: 'Playfair Display SC', serif;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px 0 30px 0;
+}
+.aisle-items {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+  font-family: 'Faustina', serif;
+}
+.item {
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  border: 1px solid black;
+}
+.item-image {
+  width: 100%;
+  display: block;
+}
+.item-content {
+  line-height: 1.5;
+  font-size: 19px;
+  padding: 15px;
+  background: #fafafa;
+  border-top: 1px solid black;
+}
+.item-content > p:last-of-type {
+  font-size: 13px;
+}
+.item-buttons {
+  text-align: center;
+  padding: 10px 0 15px 0;
+  background: #fafafa;
+}
+.add-button {
+  border: none;
+  border-radius: 10px;
+  background-color: #26282b;
+  color: white;
+  padding: 6px 16px 6px 16px;
+}
+.add-button:hover {
+  background-color: #464a54;
+}
+button {
+  padding: 10px 26px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+footer {
+  height: 88px;
+  width: 100%;
+  background-color: #26282b;
+}
+footer p {
+  color: white;
+  padding: 20px;
+  font-family: 'Yeseva One', cursive;
+}
+footer a {
+  text-decoration: none;
+  color:lightblue;
+  padding:0 0 10px 20px;
+}

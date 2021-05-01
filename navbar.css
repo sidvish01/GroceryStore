@@ -1,0 +1,228 @@
+/*
+nav bar
+*/
+ul.navbar{
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style-type: none;
+  background-color: crimson;
+  }
+
+  @media screen and (max-width: 600px) {
+  ul.navbar li.right, 
+  ul.navbar li {float: none;}
+}
+  ul.navbar li{ float: left;}
+  ul.navbar li a{
+      text-align: center;
+      padding: 18px 3em;
+      display: block;
+      color: white;
+      text-decoration: none;
+  }
+  ul.navbar li.right {float: right;}
+
+
+  li a, .dropbtn{
+      text-align: center;
+      color: white;
+      padding: 14px 16px;
+      display: inline-block; 
+      text-decoration: none;
+      background-color: crimson;
+  }
+  li.dropdown{
+      display: inline-block;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: crimson;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+  ul.navbar li a:hover:not(.active){
+      background-color: pink;
+    }
+   li a:hover, .dropdown:hover .dropbtn{
+       background-color: pink;
+   }
+   ul.navbar li a.active {
+   		background-color: darkred;
+   	}
+   .dropdown:hover .dropdown-content{
+       display: block;
+   }
+   .dropdown-content a:hover {
+       background-color: pink;
+   }
+
+   /*
+	footer
+   */
+    footer {
+    
+      width: 100%;
+      background-color: #26282b;
+     
+  
+    }
+    footer p {
+      color: white;
+      padding: 20px;
+      font-family: 'Yeseva One', cursive;
+    }
+
+	/*
+	banner
+   */
+    img.banner
+    {
+      width:100%;
+      height: auto;
+    }
+
+     body{
+     
+      background-size: 225px;
+      background-repeat: repeat;
+    }
+    body.background{
+    	 background-image: url("images/backgroundd.png");
+    }
+	.aisle {
+	  margin: 0 auto;
+	  display: grid;
+	  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+	  gap: 20px;
+	  font-family: 'Faustina', serif;
+	}
+     .backstore_area {
+      height: 100%;
+      padding: 75px 10% 88px 10%;
+      text-align: center;
+
+    }
+    .backstore_background{
+    	background-color: white;
+    	border: 3px solid black;
+    	border-radius: 10px;
+    	overflow-x: auto;
+
+    	
+    }
+    .productArea{
+    
+    	
+    }
+    .productRow{
+    	max-width: 100%;
+    	display: flex;
+    	flex-wrap: wrap;
+
+    }
+    
+    .product{
+    	box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    	background-color: white;
+    	border: 2px solid black;
+
+    }
+    
+	img.product{
+		width:100%;
+		display: block;
+		border: 0px;
+	}
+	.productinfo{
+		border-top: 2px solid black;
+		padding:15px;
+		line-height: 1.5;
+		background-color: lightgray;
+
+	}
+	.buttondiv{
+		text-align: center;
+	}
+	button{
+		background-color:#17181c;
+		color:white;
+		border-radius: 7px;
+		padding: 10px 20px 10px 20px;
+	}
+	.buttonIncrement{
+		display: flex;
+	}
+	button.increment{
+		padding: 10px 15px 10px 15px;
+	}
+	span.increment{
+		padding: 10px 15px 10px 15px;
+	
+		text-align: center;
+	}
+	input::-webkit-inner-spin-button {
+ 		 -webkit-appearance: none;
+		  margin: 0;
+		  border: none;
+	}
+	input.qty{
+		border: none;
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		position: relative;
+	}
+	.column {
+    width: 45%;
+    padding: 40px 20px 40px 20px;
+    min-width: 768px;
+    max-width: 100%;
+	}
+	.form-display {
+	
+    display: block;
+    margin: 10px 10px 10px 25%; 
+    width: 50%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;	
+}
+table{
+	width: 100%;
+	
+
+}
+table, th, td {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid gray;
+  border-collapse: collapse;
+  overflow: auto;
+}
+input[type=submit] {
+  background-color:#17181c;
+    color:white;
+    border-radius: 7px;
+    padding: 10px 20px 10px 20px;
+}
+

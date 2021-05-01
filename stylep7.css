@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.csm-banner {
+  margin-bottom: -4px;
+}
+h2 {
+  padding: 25px 0px 36px 26px;
+  font-family: 'Prata', serif;
+  background-color: #e4e9f0;
+}
+ul.navbar {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: crimson;
+}
+@media screen and (max-width: 600px) {
+  ul.navbar li.right,
+  ul.navbar li {float: none;}
+}
+ul.navbar li { float: left;}
+
+ul.navbar li a {
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+ul.navbar li.right {float: right;}
+
+li a, .dropbtn{
+  text-align: center;
+  color: white;
+  padding: 14px 16px;
+  display: inline-block;
+  text-decoration: none;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: crimson;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+ul.navbar li a:hover:not(.active){
+  background-color: pink;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: pink;
+}
+ul.navbar li a.active {background-color: darkred;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: pink;
+}
+.add{
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  position: sticky;
+  background-color: #a1beed;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  padding: 15px;
+  right: 230px;
+  top: 290px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.add span {
+  background-color: #a1beed;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.add span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+/*hover slide to right*/
+.add:hover span {
+  padding-right: 25px;
+}
+/* arrow */
+.add:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.edit-button , .delete-button{
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+}
+.edit-button {
+  background-color: #17181c;
+}
+.delete-button {
+  background-color: #bf1b1b;
+}
+.main-area {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  height: 100%;
+  padding: 75px 10% 88px 10%;
+}
+@media screen and (max-width: 640px) {
+  table {
+    overflow-x: auto;
+    display: block;
+  }
+}
+table {
+  width: 100%;
+  margin-top: 40px;
+}
+/* table header options */
+th {
+  text-align: left;
+  background-color: #f5f5f5;
+  font-family: "Georgia", Times, serif;
+}
+/* table data options */
+td{
+  background-color: white;
+}
+/* table container options */
+table, th, td {
+  border: 1px solid #dfe6f2;
+  border-collapse: collapse;
+}
+th,td{
+  padding-left: 10px;
+}

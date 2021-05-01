@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  background-image: url("backgroundd.png");
+  background-size: 220px;
+  background-repeat: repeat;
+}
+.csm-banner {
+  margin-bottom: -4px;
+}
+h2 {
+  font-family: 'Prata', serif;
+}
+ul.navbar {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: crimson;
+}
+@media screen and (max-width: 600px) {
+  ul.navbar li.right,
+  ul.navbar li {float: none;}
+}
+ul.navbar li { float: left;}
+
+ul.navbar li a {
+  text-align: center;
+  padding: 14px 16px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+ul.navbar li.right {float: right;}
+
+li a, .dropbtn{
+  text-align: center;
+  color: white;
+  padding: 14px 16px;
+  display: inline-block;
+  text-decoration: none;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: crimson;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+ul.navbar li a:hover:not(.active){
+  background-color: pink;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: pink;
+}
+ul.navbar li a.active {background-color: darkred;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: pink;
+}
+.save-button{
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  position: fixed;
+  background-color: #a1beed;
+  font-family: 'Work Sans', sans-serif;
+  position: absolute;
+  font-size: 16px;
+  padding: 15px;
+  bottom: -130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.save-button span {
+  background-color: #a1beed;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.save-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.save-button:hover span {
+  padding-right: 25px;
+}
+.save-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.title{
+  font-family: 'Work Sans', sans-serif;
+  padding-left: 7px;
+}
+.main-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  margin: 30px 10% 0 10%;
+  padding: 25px;
+  border: 1px solid grey;
+  min-height: 100%;
+}
+.edit {
+  width: 100%;
+}
+.edit-name, .edit-inventory {
+  height: 100px;
+  padding: 40px 35px 0 12px;
+  margin: 0 3px 0 3px;
+}
+.edit-image {
+  height: 250px;
+  padding: 25px 18px;
+}
+label,input {
+  padding: 10px;
+}
+label {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+}
+input {
+  border-width: thin;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
