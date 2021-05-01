@@ -492,6 +492,8 @@ function passTheData() {
   postXML.open("POST", url, true);
   postXML.setRequestHeader("Content-Type", "application/xml");
   postXML.send(orderDetail);
+  alert("Your order has been placed");
+  location.replace("index.html")
 
   /*
   var doc = document.implementation.createDocument("", "", null);

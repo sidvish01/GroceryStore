@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/SOEN287Project.css">
+    <script src="cart.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById("qty4").innerHTML = localStorage.getItem("qty4");
+        }
+
+        function showdescription() {
+            if (document.querySelector("#desc").style.display == "none")
+                document.querySelector("#desc").style.display = "block";
+            else
+                document.querySelector("#desc").style.display = "none";
+        }
+
+        function doAdd() {
+            document.querySelector("#qty4").innerHTML++;
+            localStorage.setItem("qty4", document.querySelector("#qty4").innerHTML);
+        }
+
+        function saveValue(e) {
+            var id = e.id;
+            var val = e.innerHTML;
+            localStorage.setItem(id, val);
+        }
+
+        function doSub() {
+            if (document.querySelector("#qty4").innerHTML > 1)
+                document.querySelector("#qty4").innerHTML--;
+            localStorage.setItem("qty4", document.querySelector("#qty4").innerHTML);
+        }
+
+        function zoomin() {
+            if (document.getElementById("img").style.width <= "450px") {
+                document.getElementById("img").style.width = (document.getElementById("img").width + 100) + "px";
+                document.getElementById("img").style.height = (document.getElementById("img").height + 100) + "px";
+            }
+        }
+
+        function zoomout() {
+            document.getElementById("img").style.width = (document.getElementById("img").width - 100) + "px";
+            document.getElementById("img").style.height = (document.getElementById("img").height - 100) + "px";
+        }
+
+        function SaveProduct(id) {
+            var name = id;
+            var val = document.getElementById("qty4").innerHTML;
+            sessionStorage.setItem(name, val);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="#">
+            <img src="Images/Banner.png" alt="banner" width="1500" height="150" class="bannerr">
+        </a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+                <div class="dropdown-content">
+                    <a href="Bakery.php" class="active">Bakery</a>
+                    <a href="dairy.html">Dairy</a>
+                    <a href="product page.html">Fruits And Vegetables</a>
+                    <a href="frozen_aisle.html">Frozen</a>
+                    <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+                    <a href="aisle_pantry.html">Pantry</a>
+                    <a href="oats.html">Oats</a>
+                </div>
+            </li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+            <li><a href="shopping_cart.html">Shopping Cart</a></li>
+            <li><a href="P5.php">Log In</a></li>
+            <li><a href="P6.php">Sign Up</a></li>
+        </ul>
+    </header>
+    <div class="a">
+        <div class="b1">
+            <img src="Images/Image4.jpg" id="img"><br><i class=" j fa fa-search-plus" onclick="zoomin();" aria-hidden="true"></i><i class=" k fa fa-search-minus" onclick="zoomout();" aria-hidden="true"></i>
+        </div>
+        <div class="b">
+            <div class="c">
+                FRONT STREET BAKERY
+            </div>
+            <div class="d">
+                Extra Cheddar Cheese Bread
+            </div>
+            <div class="e">
+                675g
+            </div>
+            <div class="f">
+                $6.79&nbsp;ea.
+            </div>
+            <div class="e">
+                $1.01/100g
+            </div>
+            <div class="d">
+                <input type="button" value="-" id="sub" onclick="doSub();" class="decrement">
+                <span name="quantity" id="qty4" onchange="saveValue(this);" class="quantity">1</span>
+                <input type="button" value="+" id="add" onclick="doAdd();" class="increment">
+            </div>
+            <span class="g" onclick="SaveProduct('Cheddar Cheese Bread');">
+                Add&nbsp;to&nbsp;Cart
+            </span><br><br><br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <hr class="d">
+            <div class="h">
+                Product Description
+            </div>
+            <div class="c">
+                Made with 1/2 pound of Canadian Cheddar cheese. Product Number: 201170
+            </div>
+            <div class="i" onclick="showdescription();">
+                More Description&nbsp;&nbsp;>>
+            </div>
+            <div style="border: 2px black dashed;width: 300px;height: 150px;margin-top: 20px;border-radius: 10px;margin-left: 21px;padding: 10px;font-family: arial;display: none;" id="desc">
+                Detailed Description
+            </div>
+        </div>
+    </div>
+    <footer style="margin-top: 250px;">
+        <a href="backstore.html">Admin Page</a>
+        <p> SOEN287 Course Project- Concordia SuperMarket</p>
+    </footer>
+</body></html>

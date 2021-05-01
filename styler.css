@@ -1,0 +1,103 @@
+.csm-banner {
+  width:100%;
+}
+html, body{
+  min-height: 100vh;
+}
+
+  body{
+    background-image: url("backgroundd.png");
+    background-size: 225px;
+    background-repeat: repeat
+  
+  }
+  .main{
+    display: inline-block;
+    height: 100%;
+    /* background-color: #d7e0d9;*/
+     padding: 75px 15px 88px 15px;
+     text-align: center;
+}
+ 
+        /* The code used to style the navbar and make it  responsive has been influenced by the responsive topnav and dropdown navbar
+        sections of w3schools css horisontal navigation bar section https://www.w3schools.com/css/css_navbar_horizontal.asp 
+        */
+
+  body {height: 100%;}
+  ul.navbar{
+    justify-content: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: crimson;
+  }
+  @media screen and (max-width: 600px) {
+  ul.navbar li.right, 
+  ul.navbar li {float: none;}
+}
+  ul.navbar li{ float: left;}
+  ul.navbar li a{
+      text-align: center;
+      padding: 14px 16px;
+      display: block;
+      color: white;
+      text-decoration: none;
+  }
+  ul.navbar li.right {float: right;}
+
+  
+  li a, .dropbtn{
+      text-align: center;
+      color: white;
+      padding: 14px 16px;
+      display: inline-block; 
+      text-decoration: none;
+  }
+  li.dropdown{
+      display: inline-block;
+  }
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: crimson;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+
+  ul.navbar li a:hover:not(.active){
+      background-color: pink;
+    }
+   li a:hover, .dropdown:hover .dropbtn{
+       background-color: pink;
+   }
+   ul.navbar li a.active {background-color: darkred;}
+   .dropdown:hover .dropdown-content{
+       display: block;
+   }
+   .dropdown-content a:hover {
+       background-color: pink;
+   }
+   footer {
+    height: 88px;
+    width: 100%;
+    margin-top: -88px;
+    background-color: #26282b;
+  }
+  footer p {
+    color: white;
+    padding: 20px;
+    font-family: 'Yeseva One', cursive;
+  }
+  
+ 
