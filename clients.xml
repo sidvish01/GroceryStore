@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<orderList>
+<client>
+<email> nadiakokoyev@gmail.com </email>
+<name>  jgjgjgjg  </name>
+<lastName>  sfhsa           </lastName>
+<address>jjjjj</address>
+<products>
+<produceName> banana </produceName>
+<quan> 4 </quan>
+</products>
+<products>
+<produceName> milk </produceName>
+<quan> 6 </quan>
+</products>
+</client>
+
+<client>
+<email> bananaataco@gmail.com </email>
+<name> Nadia </name>
+<lastName> Kokoev </lastName>
+<address> 10.17.5.241 </address>
+<products>
+<produceName> chicken </produceName>
+<quan> 1 </quan>
+</products>
+<products>
+<produceName> milk </produceName>
+<quan> 8 </quan>
+</products>
+</client>
+</orderList>
