@@ -12,7 +12,7 @@
 	  	
 		<header>
 			<a href="orderlist.html">
-        	<img class="banner" src="Images/banner.png" alt="banner" >
+        	<img class="banner" src="Images/Banner.png" alt="banner" >
       		</a>
 			
 		</header>
