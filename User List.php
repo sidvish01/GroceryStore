@@ -12,7 +12,7 @@
 	  	
 		<header>
 			<a href="orderlist.html">
-        	<img class="banner" src="images/banner.png" alt="banner" >
+        	<img class="banner" src="Images/banner.png" alt="banner" >
       		</a>
 			
 		</header>
@@ -115,7 +115,7 @@
   
   </div>
   <hr>
-    <a href="sign up.php"><button class="add">Add User</button></a>
+    <a href="p6.php"><button class="add">Add User</button></a>
    
 
 </body>	

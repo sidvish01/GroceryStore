@@ -9,7 +9,7 @@
 	
 	<body class="background">
 		<header>		
-	        <img class="banner" src="images/banner.png" alt="banner" >
+	        <img class="banner" src="Images/banner.png" alt="banner" >
 			
 		</header>
 	
