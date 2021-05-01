@@ -13,9 +13,9 @@
       <img src="banner.png" alt="banner" class="bannerr">
     </a>
     <ul class="navbar">
-      <li><a href="backstore.html">Home</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="User list.html">Users</a></li>
+      <li><a href="backstore.php">Home</a></li>
+      <li><a href="products.php">Products</a></li>
+      <li><a href="User list.php">Users</a></li>
       <li><a href="orderlist.php">Orders</a></li>
     </ul>
   </header>
