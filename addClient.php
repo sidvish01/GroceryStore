@@ -32,7 +32,7 @@
       <div class = "main-area">
         <h1>Add New Order Manually</h1>
         <div class="boxing" >
-          <form action="orderlist2.php" method="post">
+          <form action="orderlist.php" method="post">
           <div class="clientinfo">
       <div class="info">
         Name:
@@ -111,8 +111,8 @@ function Decrement() {
  </script>
         
         </div><br>
-        <button href="orderlist2.php" type="submit" id="addbutton" value="Save Changes">Save Changes</button>
-        <button href="orderlist2.php" class="redbutton" value="Discard Changes">Discard Changes</button>
+        <button href="orderlist.php" type="submit" id="addbutton" value="Save Changes">Save Changes</button>
+        <button href="orderlist.php" class="redbutton" value="Discard Changes">Discard Changes</button>
         <!-- <a href="editlist.html"> <button id="addbutton">Save Changes</button></a>
         <a href="orderlist.html"><button class="redbutton">Discard Changes</button></a> -->
       <!--</form>-->

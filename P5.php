@@ -62,11 +62,18 @@ if(isset($_POST['login'])){
                     <input type="checkbox" id="checkbox1"><label for="checkbox1"><span class="remember">Remember&nbsp;Me</span></label>
                     <a class="forgot" href="#">Forgot&nbsp;your&nbsp;Password?</a>
                     <div class="btnsignin">
-                        <input type="submit" class="btnlogin" value="Login" name="login">
+                        <input type="submit" class="btnlogin" value="Login" name="login" onclicl = "addEmailToStorage()" >
                     </div>
                 </div>
             </center>
         </div>
+        <script>
+            function addEmailToStorage{
+                var email = getElementByName("email")
+                console.log(email)
+                sessionStorage.setItem("userId", email)
+            }
+            </script>
         <footer>
             <a href="backstore.html">Admin Page</a>
             <p> SOEN287 Course Project- Concordia SuperMarket</p>

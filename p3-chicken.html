@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="stylep3.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina&family=Yeseva+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <script src="cart.js" async></script> -->
+</head>
+
+<body>
+  <header>
+    <a href="productpage.html">
+      <img src="banner.png" alt="banner" height="150" class="csm-banner">
+    </a>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+        <div class="dropdown-content">
+          <a href="Bakery.html">Bakery</a>
+          <a href="dairy.html">Dairy</a>
+          <a href="fruit aisle.html">Fruits And Vegetables</a>
+          <a href="frozen_aisle.html">Frozen</a>
+          <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+          <a href="aisle_pantry.html">Pantry</a>
+          <a href="oats.html">Oats</a>
+        </div>
+      </li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="shopping_cart.html"><span id = "cart-tab">Shopping Cart</span></a></li>
+      <li><a href="P5.html">Log In</a></li>
+      <li><a href="P6.html">Sign Up</a></li>
+    </ul>
+  </header>
+
+    <div class="main-area">
+      <div class="row">
+        <div class="column">
+            <div class="item-image">
+              <img id="image"src="product-images/chicken.jpg" width=100%>
+              <div class="zoom">
+                <span class="material-icons">zoom_in</span>
+                <span class="material-icons">zoom_out</span>
+              </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="item-info">
+              <h2 id="name">Fresh Whole Chicken</h2>
+              <p> <span id="price">$12.54</span> avg ea.</p>
+              <p>$8.36/ kg $3.79/ lb.</p>
+              <div class="buttons">
+                <button id="add-to-cart" class="add-cart" onclick = "addtocartbutton()">Add to Cart</button>
+                <button id="decrease" class="decrement" onclick = "decreaseQuantity()">-</button>
+                <b style="width:20px; text-align:center"><span id="qty"> 1 </span></b>
+                <button id="increase" class="increment" onclick = "increaseQuantity()">+</button>
+              </div>
+            </div>
+            <div class="product-description">
+              <h2> Product Description </h2>
+              <p> Fresh whole chicken(approx.1.77kg). Product of Quebec.</p>
+              <p> Product Number: 0012999 </p>
+              <button type="button" name="more description" class="more-info" style="vertical-align:middle"><span>More Description</span></button>
+              <div class="text" style="font-size:16px; display:none"> Buy 2 get 1 Free! Offer Expires: 12/12/21 </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+        <a href="backstore.html">Admin Page</a>
+        <p> SOEN287 Course Project- Concordia SuperMarket</p>
+    </footer>
+    <script>
+    let col = document.getElementsByClassName('more-info');
+    col[0].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+    var products = [
+    {
+      name: "Lean Ground Beef",
+      price: 13.21,
+      img: "product-images/groundbeef.jpg"
+    },
+    {
+      name: "Pepper Beef Steaks",
+      price: 16.04,
+      img: "product-images/pepper-beef-steaks.jpg"
+    },
+    {
+      name: "T-Bone Steaks",
+      price: 26.44,
+      img: "product-images/tbone-steaks.jpg"
+    },
+    {
+      name: "Fresh Whole Chicken",
+      price: 12.54,
+      inCart: 0,
+      img: "product-images/chicken.jpg"
+    },
+    {
+      name: "Pork Back Ribs",
+      price: 15.41,
+      img: "product-images/pork-backribs.jpg"
+    },
+    {
+      name: "Chicken Drumsticks",
+      price: 7.62,
+      img: "product-images/chicken-drumstick.jpg"
+    },
+  ];
+updateCartTab(0);
+//var cartRow = document.createElement('tr')
+var something = ``;
+var firstthing = `<table class="cart">
+<tr class="cart-fields">
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+</tr>`;
+var nextthing = ``;
+var lastthing = `</table>`;
+for (var i = 0; i < sessionStorage.length; i++) {
+  for (var p = 0; p < products.length; p++) {
+    if (
+      products[p].name == sessionStorage.key(i) &&
+      sessionStorage.getItem(products[p].name) != 0
+    ) {
+      nextthing =
+        nextthing +
+        `<tr class="cart-item">
+    <td class="item-name"><img src="${
+      products[p].img
+    }" alt="Mayonnaise Container" width="150"
+            height="150"><br><span id = "productname">${products[p].name}</span>
+    </td>
+    <td>
+        <button class="button-cart-remove" type="button">-</button> <span class="item-quantity">${sessionStorage.getItem(
+          products[p].name
+        )}</span>
+        <button class="button-cart-add" type="button">+</button>
+    </td>
+    <td class="item-price">${products[p].price}</td>
+</tr>`;
+    }
+  }
+}
+something = firstthing + nextthing + lastthing;
+
+var cart = document.getElementsByClassName("try")[0];
+var cartRow = document.createElement("div");
+var cartRowContent = something;
+cartRow.innerHTML = cartRowContent;
+cart.prepend(cartRow);
+
+var removeQuantityButton = document.getElementsByClassName(
+  "button-cart-remove"
+);
+var addQuantityButton = document.getElementsByClassName("button-cart-add");
+var itemQuantity = document.getElementsByClassName("item-quantity");
+updateCartTotal();
+
+for (var i = 0; i < removeQuantityButton.length; i++) {
+  var button = removeQuantityButton[i];
+  if (itemQuantity[i].innerHTML == 1) {
+    button.addEventListener("click", function (event) {
+      var removePrompt = confirm("Do you want to remove this item from cart?");
+      if (removePrompt == true) {
+        console.log(buttonClicked.parentNode.children[0].children[2].innerText, 0)
+        sessionStorage.setItem(
+          buttonClicked.parentNode.children[0].children[2].innerText,
+          0
+        );
+        var buttonClicked = event.target;
+        buttonClicked.parentNode.parentNode.remove();
+        updateCartTab(-1);
+        updateCartTotal();
+        checkEmptyCart();
+      }
+    });
+  } else {
+    button.addEventListener("click", function (event) {
+      var buttonClicked = event.target.parentNode;
+      if (buttonClicked.children[1].innerHTML == 1) {
+        var removePrompt = confirm(
+          "Do you want to remove this item from cart?"
+        );
+        if (removePrompt == true) {
+          sessionStorage.setItem(
+            buttonClicked.parentNode.children[0].children[2].innerText,
+            0
+          );
+          buttonClicked.parentNode.remove();
+          updateCartTab(-1);
+          updateCartTotal();
+          checkEmptyCart();
+        }
+      } else {
+        sessionStorage.setItem(
+          buttonClicked.parentNode.children[0].children[2].innerText,
+          buttonClicked.children[1].innerHTML - 1
+        );
+        buttonClicked.children[1].innerHTML -= 1;
+        updateCartTab(-1);
+        updateCartTotal();
+        checkEmptyCart();
+      }
+    });
+  }
+}
+
+for (var i = 0; i < addQuantityButton.length; i++) {
+  var button = addQuantityButton[i];
+  button.addEventListener("click", function (event) {
+    var buttonClicked = event.target.parentNode;
+    sessionStorage.setItem(
+      buttonClicked.parentNode.children[0].children[2].innerText,
+      parseInt(buttonClicked.children[1].innerHTML) + 1
+    );
+    buttonClicked.children[1].innerHTML =
+      parseInt(buttonClicked.children[1].innerHTML) + 1;
+      updateCartTab(1);
+    updateCartTotal();
+    checkEmptyCart();
+  });
+}
+
+function updateCartTotal() {
+  var cartItem = document.getElementsByClassName("cart-item");
+  var total = 0;
+  for (var i = 0; i < cartItem.length; i++) {
+    var price = parseFloat(
+      cartItem[i]
+        .getElementsByClassName("item-price")[0]
+        .innerText.replace("$", "")
+    );
+    var quantity = parseInt(
+      cartItem[i].getElementsByClassName("item-quantity")[0].innerText
+    );
+    total = total + price * quantity;
+  }
+  document.getElementsByClassName("subtotal")[0].innerText = total.toFixed(2);
+  document.getElementsByClassName("qst")[0].innerText = (
+    0.09975 * total
+  ).toFixed(2);
+  document.getElementsByClassName("gst")[0].innerText = (0.05 * total).toFixed(
+    2
+  );
+  document.getElementsByClassName("total")[0].innerText = (
+    parseFloat(document.getElementsByClassName("subtotal")[0].innerText) +
+    parseFloat(document.getElementsByClassName("qst")[0].innerText) +
+    parseFloat(document.getElementsByClassName("gst")[0].innerText)
+  ).toFixed(2);
+}
+
+function checkEmptyCart() {
+  var cartItem = document.getElementsByClassName("cart-item");
+  if (cartItem.length == 0) {
+    alert(
+      "Your cart is empty, let's take you to homepage and add some items!!"
+    );
+    location.replace("index.html");
+  }
+}
+
+function addtocartbutton() {
+  var key = document.getElementById("name").innerHTML;
+  var addItems = parseInt(document.getElementById("qty").innerHTML);
+  updateCartTab(addItems);
+  addToSessionStorage(key, addItems);
+  document.getElementById("qty").innerHTML = 1;
+}
+
+function increaseQuantity() {
+  document.getElementById("qty").innerHTML =
+    parseInt(document.getElementById("qty").innerHTML) + 1;
+}
+function decreaseQuantity() {
+  if (parseInt(document.getElementById("qty").innerHTML) > 1)
+    document.getElementById("qty").innerHTML =
+      parseInt(document.getElementById("qty").innerHTML) - 1;
+}
+
+
+function addToCartAisle(name){
+  var itemName = ""+name
+  console.log(itemName)
+  addToSessionStorage(name, 1)
+  updateCartTab(1)
+
+}
+
+function addToSessionStorage(itemName, itemQuantity) {
+  if (sessionStorage.getItem(itemName) != null) {
+    sessionStorage.setItem(itemName, (parseInt(sessionStorage.getItem(itemName)) + parseInt(itemQuantity)));
+  }
+  else {
+    sessionStorage.setItem(itemName, itemQuantity);
+  }
+}
+
+function updateCartTab(value) {
+  if (sessionStorage.getItem("itemTotal") != null) {
+    sessionStorage.setItem("itemTotal", parseInt(sessionStorage.getItem("itemTotal")) + parseInt(value));
+  }
+  else {
+    sessionStorage.setItem("itemTotal", value);
+  }
+  showShowCartTab();
+}
+
+function showShowCartTab() {
+  document.getElementById("cart-tab").innerHTML = "Shopping Cart (" + sessionStorage.getItem("itemTotal") + ")";
+}
+</script>
+
+</body>
+
+</html>
