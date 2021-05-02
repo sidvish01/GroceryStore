@@ -488,7 +488,7 @@ function passTheData() {
 
   var postXML = new XMLHttpRequest();
   //console.log(orderDetail)
-  var url = "http://localhost:8888/test.php"
+  var url = "https://connect-virginia.heroku.com/api/v3"
   
   postXML.open("POST", url, true);
   postXML.setRequestHeader("Content-Type", "application/xml");
