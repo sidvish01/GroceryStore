@@ -21,7 +21,7 @@ session_start();
 $xml=simplexml_load_file("users.xml");
  //if admin signs in go to admin page(code should be on p5 page)
  if($_POST['username'] =="admin@gmail.com"){
-    echo "<script> location.href='backstore.html'; </script>";
+    echo "<script> location.href='https://concordiasupermarket.herokuapp.com/backstore.html'; </script>";
     exit;
 }
 else if($_POST['username'] == $xml->client->Username && $_POST['password'] == $xml->client->Password ){
