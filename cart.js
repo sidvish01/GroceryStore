@@ -488,7 +488,7 @@ function passTheData() {
 
   var postXML = new XMLHttpRequest();
   //console.log(orderDetail)
-  var url = "https://concordiasupermarket.herokuapp.com"
+  var url = "https://concordiasupermarket.herokuapp.com/test.php"
   
   postXML.open("POST", url, true);
   postXML.setRequestHeader("Content-Type", "application/xml");
