@@ -69,7 +69,7 @@ if(isset($_POST['login'])){
         </div>
         <script>
             function addEmailToStorage(){
-                var email = getElementByName("email")
+                var email = document.getElementByName("email").value
                 console.log(email)
                 sessionStorage.setItem("userId", email)
                 //might not work since there's other Post calls on login

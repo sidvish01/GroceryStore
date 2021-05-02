@@ -467,8 +467,9 @@ function showShowCartTab() {
 // function to create xml with order list -------------------------------------
 
 function passTheData() {
+  var userId = sessionStorage.getItem("email");
 
-  var orderDetail = "<client>\n" + /*"<name> " + "namefromsession " + "</name>\n" + "<lastname> " + "lastname " + "</lastname\n" + */"<id> " + "csm@concordia.ca " + "</id>\n" /* +  "<address> " + "Address " + "</address\n"> + */ 
+  var orderDetail = "<client>\n" + /*"<name> " + "namefromsession " + "</name>\n" + "<lastname> " + "lastname " + "</lastname\n" + */"<id> " + userId + " </id>\n" /* +  "<address> " + "Address " + "</address\n"> + */ 
 
   for (var i = 0; i < sessionStorage.length; i++) {
     for (var p = 0; p < products.length; p++) {
