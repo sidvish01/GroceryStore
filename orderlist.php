@@ -60,7 +60,7 @@
       echo $address;
 //    }
 $email = $xml->client[$count]->email=$email;
-    $xml->asXML("clients.xml"); //this saves the changes inside the actual xml file
+    $xml->asXML("orderlist.xml"); //this saves the changes inside the actual xml file
   }
 }
 
