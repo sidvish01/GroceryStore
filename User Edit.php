@@ -9,7 +9,7 @@
 	
 	<body class="background">
 		<header>		
-	        <img class="banner" src="Images/Banner.png" alt="banner" >
+	        <img class="banner" src="images/banner.png" alt="banner" >
 			
 		</header>
 	
@@ -20,9 +20,9 @@
 			<ul class="navbar">
 		        <ul class="navbar">
 		        <li><a href="backstore.html">Home</a></li>
-		        <li><a href="products.php">Product</a> </li>
+		        <li><a href="products.html">Product</a> </li>
 		        <li><a href="User List.php">User</a></li>
-		        <li><a href="orderlist.php">Order</a></li>
+		        <li><a href="orderlist.html">Order</a></li>
 	      	</ul>
 	      	</ul>
       
@@ -42,30 +42,68 @@
 					unset($element_name[3]);
 					unset($element_name[4]);
 				
-					
+				?>
 				
+
+				<?php 
+				if(empty($_GET['Id'])){
+				echo "<p>";
+				echo "<form  method=\"post\">";							
+				echo	"Name:<input  type=\"text\"  name=\"name\" id=\"name\" class=\"form-display\" value=\"\">";			
+				echo	"Email:<input  type=\"email\" name=\"email\" id=\"email\"  class=\"form-display\" value=\"\">";			
+				echo	"Address:<input  type=\"text\"  name=\"address\" id=\"address\" class=\"form-display\" value=\"\">";
+				echo	"<a a href=\"User List.php\"><input type=\"submit\" name=\"submit\" value=\"Submit\"></a>";
+				echo "</form>";
+				echo "</p>";
+				}
+				else{
+				echo "<p>";
+				echo "<form  method=\"post\" >";							
+				echo	"Name:<input  type=\"text\"  name=\"name\" id=\"name\" class=\"form-display\" value=\"";
+				echo $xml->client[(int)$_GET['Id']-1]->Name;
+				echo "\">";			
+				echo	"Email:<input  type=\"email\" name=\"email\" id=\"email\"  class=\"form-display\" value=\"";
+				echo $xml->client[(int)$_GET['Id']-1] ->Email; ;
+				echo "\">";			
+				echo	"Address:<input  type=\"text\"  name=\"address\" id=\"address\" class=\"form-display\" value=\"";
+				echo  $xml->client[(int)$_GET['Id']-1] ->Address; ;
+				echo "\">";
+				echo	"<a a href=\"User List.php\"><input type=\"submit\" name=\"submit\" value=\"Submit\"></a>";
+				echo "</form>";
+				echo "</p>";
+				}
+
 
 
 				?>
 
+			
 
-			<p>
-				<form  method="post" >								
-					Name:<input  type="text"  name="name" id="name" class="form-display" value="<?php echo $xml->client[(int)$_GET['Id']-1] ->Name; ?>">			
-					Email:<input  type="email" name="email" id="email"  class="form-display" value="<?php  echo $xml->client[(int)$_GET['Id']-1] ->Email; ?>">			
-					Address:<input  type="text"  name="address" id="address" class="form-display" value="<?php echo $xml->client[(int)$_GET['Id']-1] ->Address; ?>">
-					<a a href="User List.php"><input type="submit" name="submit" value="Submit"></a>
-				</form>
+
+
 				<?php
-				$user=$xml->client[(int)$_GET['Id']-1];
+				
 			    
-			    if (isset($_POST['submit'])){
-			    	
+			    if (isset($_POST['submit'])&&(!empty($_GET['Id']))){
+			    	$user=$xml->client[(int)$_GET['Id']-1];
 			    	$user ->Name= $_POST['name'];
 				    $user ->Email=$_POST['email'];
 				    $user ->Address=$_POST['address'];
 				    file_put_contents("user.xml", $xml->saveXML());
 				    echo "User has been Modified";
+			    }
+			    else if(isset($_POST['submit']))
+			    {
+			    	$userbase=$xml;
+
+					$client=$userbase->addchild('client');
+					$client->addchild("Name", $_POST['name']);
+					$client->addchild("Email",$_POST['email']);
+					$client->addchild ("Address",$_POST['address']);
+					$client->addchild("Username", $_POST['email']);
+					$client->addchild("Password", "00000000");
+					file_put_contents("user.xml", $xml->saveXML());
+					echo "user has beed added";
 			    }
 			    ?>
         

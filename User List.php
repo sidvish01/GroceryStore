@@ -12,16 +12,16 @@
 	  	
 		<header>
 			<a href="orderlist.html">
-        	<img class="banner" src="Images/Banner.png" alt="banner" >
+        	<img class="banner" src="images/banner.png" alt="banner" >
       		</a>
 			
 		</header>
 		<div>
 			<ul class="navbar">
 		        <li><a href="backstore.html">Home</a></li>
-		        <li><a href="products.php">Product</a> </li>
+		        <li><a href="products.html">Product</a> </li>
 		        <li><a class="active" >User</a></li>
-		        <li><a href="orderlist.php">Order</a></li>
+		        <li><a href="orderlist.html">Order</a></li>
 	      	</ul>
       </div>
 
@@ -115,7 +115,7 @@
   
   </div>
   <hr>
-    <a href="P6.php"><button class="add">Add User</button></a>
+    <a href="User Edit.php"><button class="add">Add User</button></a>
    
 
 </body>	
