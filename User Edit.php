@@ -9,7 +9,7 @@
 	
 	<body class="background">
 		<header>		
-	        <img class="banner" src="images/banner.png" alt="banner" >
+	        <img class="banner" src="Images/Banner.png" alt="banner" >
 			
 		</header>
 	
@@ -20,9 +20,9 @@
 			<ul class="navbar">
 		        <ul class="navbar">
 		        <li><a href="backstore.html">Home</a></li>
-		        <li><a href="products.html">Product</a> </li>
+		        <li><a href="products.php">Product</a> </li>
 		        <li><a href="User List.php">User</a></li>
-		        <li><a href="orderlist.html">Order</a></li>
+		        <li><a href="orderlist.php">Order</a></li>
 	      	</ul>
 	      	</ul>
       
