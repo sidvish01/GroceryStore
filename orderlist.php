@@ -34,7 +34,7 @@
         $lastNamee = $_POST["last-name"];
         }
 
-        $xml=simplexml_load_file("clients.xml") or die("Error: Cannot create object");
+        $xml=simplexml_load_file("orderlist.xml") or die("Error: Cannot create object");
         //echo gettype($email);
         //echo gettype($myText);
         for ($count =0 ;$count < sizeof($xml) ;$count++){
