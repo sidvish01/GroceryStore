@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Products </title>
+  <link rel="stylesheet" type="text/css" href="styleproductpage.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- - Google Fonts work sans:titles; Playfair display:main page-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Faustina&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="frozenpizza.html" >
+      <img src="banner.png" alt="banner" class="bannerr">
+    </a>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+        <div class="dropdown-content">
+          <a href="Bakery.html">Baking Supplies</a>
+          <a href="dairy.html">Dairy</a>
+          <a href="fruit aisle.html">Fruits An Vegitibles</a>
+          <a href="frozen_aisle.html">Frozen</a>
+          <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+          <a href="aisle_pantry.html">Pantry</a>
+          <a href="oats.html">Oats</a>
+        </div>
+      </li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="shopping_cart.html">Shopping Cart</a></li>
+      <li><a href="P5.html">Log In</a></li>
+      <li><a href="P6.html">Sign Up</a></li>
+    </ul>
+  </header>
+
+  <div class = "main-area">
+    <div class="row">
+      <div class="column">
+        <div class="item-image">
+          <img id="product" src="pictures/frozenpizza.jpg" width=100%>
+          <div class="zoom">
+            <span class="material-icons">zoom_in</span>
+            <span class="material-icons">zoom_out</span>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="item-info">
+          <h2>Frozen Pizza</h2>
+          <p>$9.49/ 452g</p>
+          <div class="shop">
+            <input type="button" value="-" class="adding">
+            <input type="text" class="quantity">
+            <input type="button" value="+" class="adding">
+          </div>
+          <button type="button" name="add to cart" class="add-cart">Add to Cart</button>
+        </div>
+        <div class="product-description">
+          <h2> Product Description </h2>
+          <p> Frozen pizza with vegtables and beef</p>
+          <p> Product Number: 382227 </p>
+          <button type="button" name="more description" class="more-info" style="vertical-align:middle"><span>More Description</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p> SOEN287 Course Project- Concordia SuperMarket</p>
+  </footer>
+</body>
+
+</html>

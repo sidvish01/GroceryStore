@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Products </title>
+  <link rel="stylesheet" type="text/css" href="styleproductpage.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- - Google Fonts work sans:titles; Playfair display:main page-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Faustina&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="jsnadia.js" async></script>
+</head>
+<body>
+  <header>
+    <a href="Falafel.html" >
+      <img src="banner.png" alt="banner" class="bannerr">
+    </a>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Aisles</a>
+        <div class="dropdown-content">
+          <a href="Bakery.html">Baking Supplies</a>
+          <a href="dairy.html">Dairy</a>
+          <a href="fruit aisle.html">Fruits and Vegitibles</a>
+          <a href="frozen_aisle.html">Frozen</a>
+          <a href="p2-MeatPoultry.html">Meat and Poultry</a>
+          <a href="aisle_pantry.html">Pantry</a>
+          <a href="oats.html">Oats</a>
+        </div>
+      </li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="shopping_cart.html"><span id = "cart-tab">Shopping Cart</span></a></li>
+      <li><a href="P5.html">Log In</a></li>
+      <li><a href="P6.html">Sign Up</a></li>
+    </ul>
+  </header>
+
+  <div class = "main-area">
+    <div class="row">
+      <div class="column">
+        <div class="item-image">
+          <img id="product" src="pictures/falafel.jpg" width=100%>
+          <div class="zoom">
+            <span class="material-icons">zoom_in</span>
+            <span class="material-icons">zoom_out</span>
+          </div>
+
+         
+        </div>
+      </div>
+      <div class="column">
+        <div class="item-info">
+          <h2 class="namep">Falafel</h2>
+          <p>$4.99/ 260g</p>
+          <div class="shop">
+            <button onclick="Decrement()" class="adding">-</button>
+            <div id="quan">1</div>
+            <button onclick="increment()" class="adding">+</button>
+          </div>
+          <button onclick="addToCartButton()" type="button" name="add to cart" class="add-cart">Add to Cart</button>
+        </div>
+        <div class="product-description">
+          <h2> Product Description </h2>
+          <p> a deep-fried ball or patty made from ground chickpeas
+          <span id="showDots">...</span></p>
+          <div id="hiddenText"><!--work package 2 -->
+          <p> Product Number: 384567 </p>
+          <p>Yves Veggie</p>
+          <p>260 g</p>
+          </div><br>
+          
+          <button onclick="moreInfo()" class="more-info" ><span id="more-Info">More Description</span></button>
+          <!--style="vertical-align:middle"-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p> SOEN287 Course Project- Concordia SuperMarket</p>
+  </footer>
+</body>
+
+</html>

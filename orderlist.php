@@ -13,8 +13,8 @@
     </a>
     <ul class="navbar">
       <li><a href="backstore.html">Home</a></li>
-      <li><a href="products.php">Products</a></li>
-      <li><a href="User List.php">Users</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="User list.html">Users</a></li>
       <li><a href="orderlist.php">Orders</a></li>
     </ul>
   </header>
@@ -33,24 +33,33 @@
         $namee = $_POST["name"];
         $lastNamee = $_POST["last-name"];
         }
-       
 
         $xml=simplexml_load_file("clients.xml") or die("Error: Cannot create object");
-for ($count =0 ;$count < sizeof($xml) ;$count++){
-  if (! empty( $_POST["email"])){ 
-  if ($xml->client[$count]->email==$email){
-    while ($xml->client[$count]->name != $namee){
+        //echo gettype($email);
+        //echo gettype($myText);
+        for ($count =0 ;$count < sizeof($xml) ;$count++){
+  if (! empty( $_POST["email"])){
+    $myText = (string)$xml->client[$count]->email;
+    echo strcmp($myText,$email);
+    echo $myText;
+    echo $email;
+  if (strcmp($myText,$email)==0){
+    echo $myText;
+    echo $email;
+    echo strcmp($myText,$email);
+//    while ($xml->client[$count]->name != $namee){
       $name = $xml->client[$count]->name=$namee;
-      //echo $name;
-    }
-    while ($xml->client[$count]->lastName != $lastNamee){
+      echo $name;
+//    }
+//    while ($xml->client[$count]->lastName != $lastNamee){
       $lastName = $xml->client[$count]->lastName=$lastNamee;
-      //echo $lastName;
-    }
-    while ($xml->client[$count]->address != $addresis){
+      echo $lastName;
+//    }
+//    while ($xml->client[$count]->address != $addresis){
       $address = $xml->client[$count]->address=$addresis;
-      //echo $address;
-    }
+      echo $address;
+//    }
+$email = $xml->client[$count]->email=$email;
     $xml->asXML("clients.xml"); //this saves the changes inside the actual xml file
   }
 }
@@ -59,7 +68,11 @@ for ($count =0 ;$count < sizeof($xml) ;$count++){
     $lastName= $xml->client[$count]->lastName;
     $email= $xml->client[$count]->email;
     $address= $xml->client[$count]->address;
-    
+    //echo $name;
+    //echo $lastName;
+    //echo $email;
+    //echo $address;
+
     $num = sizeof($xml->client[$count]->products);
 
     $openingLine='<tr><td>';
@@ -68,7 +81,7 @@ for ($count =0 ;$count < sizeof($xml) ;$count++){
     $hidden3='">';
     $middle='</td><td>';
     $end='</td></tr>';
-    
+
 
     echo '<form action="editClient.php" method="post">';
     echo "$openingLine $email $hidden1";
@@ -110,7 +123,7 @@ for ($count =0 ;$count < sizeof($xml) ;$count++){
     echo "$end";
    // <a href="#nothingyet">
     }
-?> 
+?>
         </table>
         <a href="addClient.php"> <button id="addbutton">Add Client</button></a>
         <script async>
@@ -122,28 +135,28 @@ for ($count =0 ;$count < sizeof($xml) ;$count++){
 }
 </script>
 
-<!-- <?php
-    //     if(array_key_exists('completed', $_POST)) {
-    //       completed();
+ <?php
+    //      if(array_key_exists('completed', $_POST)) {
+    //        completed();
     //     }
-    //     function completed() {
-    //       $xml=simplexml_load_file("clients.xml") or die("Error: Cannot create object");
-    //       //$email = $_POST["email"];
-    //      // $address = $_POST["address"];
-    //      // $name = $_POST["name"];
-    //      // $lastName = $_POST["lastName"];   
+    //      function completed() {
+    //        $xml=simplexml_load_file("clients.xml") or die("Error: Cannot create object");
+    //        //$email = $_POST["email"];
+    //       // $address = $_POST["address"];
+    //       // $name = $_POST["name"];
+    //       // $lastName = $_POST["lastName"];
 
-    //       for ($count =0 ;$count < sizeof($xml) ;$count++){ 
-    //         if ($xml->client[$count]->email==$email){
-    //         $xml->client[$count]->name=null;
-    //         $xml->client[$count]->lastName=null;
-    //         $xml->client[$count]->address=null;
+    //      for ($count =0 ;$count < sizeof($xml) ;$count++){
+    //      if ($xml->client[$count]->email==$email){
+    //       $xml->client[$count]->name=null;
+    //          $xml->client[$count]->lastName=null;
+    //          $xml->client[$count]->address=null;
     //         $xml->client[$count]->email=null;
     //     }
-    //   }
-    // }
+    //    }
+    //  }
 
-    ?> -->
+    ?>
 
     </div>
     <footer>
