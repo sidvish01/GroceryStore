@@ -14,7 +14,7 @@
     <ul class="navbar">
       <li><a href="backstore.html">Home</a></li>
       <li><a href="products.php">Products</a></li>
-      <li><a href="User list.php">Users</a></li>
+      <li><a href="User List.php">Users</a></li>
       <li><a href="orderlist.php">Orders</a></li>
     </ul>
   </header>
