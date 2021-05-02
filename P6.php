@@ -30,6 +30,7 @@ if (isset($_POST['SignUp'])){
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -125,5 +126,18 @@ if (isset($_POST['SignUp'])){
         </footer>
     </form>
 </body>
+<?php
+$xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><userbase></userbase>');
+
+if(isset($_POST['SignUp'])){
+
+    //write form info to xml file & save
+    $client = $xml->addChild('client');
+    $client->addChild('Name', $_POST['fname']);
+    $client->addChild('Username', $_POST['username']);
+    $client->addChild('Password', $_POST['password']);
+    $xml->asXML('users.xml');
+}
+?>
 
 </html>
